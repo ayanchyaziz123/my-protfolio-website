@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+  <div class="row mt-5 text-center">
+    <div class="col-sm-3">
+    
+    <h4 class="text-center text-style mb-3">About Me</h4>
+    <hr>
+    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw" alt="Cinque Terre"> <hr>
+      <span class="text-style-two">Name : Azizur Rahman</span></br>
+      <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> Student At <br> Metropolitan University, Bangladesh</span></br>
+<span class="text-style-two"><a href="mailto:webmaster@example.com" class="text-white"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
+<span class="text-style-two"><a href="tel:123-456-7890"><i class="fa fa-mobile" aria-hidden="true"></i> 01759773446</a></span><br>
+<a href="#" class="btn btn-info mt-2">Download CV</a>
+<hr>
+<h4 class="text-center text-style">Find Me</h4>
+<hr>
+<marquee behavior="scroll" direction="down" value="Slower" class="text-center" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+
+<span class="text-style-two"><a href="#"><i class="fa fa-github" aria-hidden="true"></i>
+ github</a></span><br>
+ <span class="text-style-two"><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+ linkedin</a></span><br>
+ <span class="text-style-two"><a href="#"><i class="fa fa-code" aria-hidden="true"></i>
+codecheaf</a></span><br>
+ <span class="text-style-two"><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i>
+youtube</a></span><br>
+ <span class="text-style-two"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+instagram</a></span><br>
+
+</marquee>
+ <hr>
+    </div>
+    <div class="col-sm-9 ">
+    <h4 class="text-center text-style mb-3">Biography</h4>
+    <hr>
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/ayan6.jpg' %}" alt="Los Angeles" width="1000" height="400">
+      <div class="carousel-caption">
+        <h3>New York</h3>
+        <p>We love the Big Apple!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/aya.jpeg' %}" alt="Chicago" width="1000" height="400">
+       <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/ayan8.jpg' %}" alt="New York" width="1000" height="400">
+       <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div>   
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div> 
+<hr>
+
+      <p class="text-style-two">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+ and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+      <hr>
+   
+      
+    </div>
+    
+  </div>
+
+
+
+ <h3 class="text-center mt-5 text-style"> Recent Project</h3>
+ <p class="text-center">recent projects were made by me<p/>
+  <div class="row mt-5">
+ 
+
+    <div class="col-sm-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+
+  </div>
+</div>
+
+
+
+    </div>
+    <div class="col-sm-3">
+
+<div class="card shadow ">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+
+  </div>
+</div>
+
+    </div>
+    <div class="col-sm-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+   
+  </div>
+</div>
+    </div>
+
+
+        <div class="col-sm-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+  
+  </div>
+</div>
+    </div>
+        <div class="col-sm-3 mt-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+  
+  </div>
+</div>
+    </div>
+        <div class="col-sm-3 mt-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+  </div>
+</div>
+    </div>
+        <div class="col-sm-3 mt-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+
+  </div>
+</div>
+    </div>
+        <div class="col-sm-3 mt-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <hr>
+
+
+
+
+
+
+
+
+{% endblock content %}

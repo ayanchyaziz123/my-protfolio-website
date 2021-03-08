@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+</head>
+<body style="background-color: #F0FFF0;">
+<!--container-->
+<div class="container">
+<!--start navbar-->
+  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Download Cv</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Skills</a>
+      </li>
+      
+
+       <div class="dropdown"> 
+              
+            <!-- Dropdown button -->
+            <button  type="button" 
+                    class="btn btn-info dropdown-toggle" 
+                      
+                    data-toggle="dropdown"> 
+                More
+                <a href="javascript:void(0);" 
+                   class="icon" 
+                   onclick="geeksforgeeks()"> 
+                      
+                    <!-- Chnaging the default icon with toggle-->
+                    <i onclick="myFunction(this)"
+                       class="fa fa-plus-circle fas"></i> 
+                </a> 
+            </button> 
+              
+            <!-- Dropdown options -->
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item text-white" href="#">Testimonial</a>
+          <a class="dropdown-item text-white" href="#">Exprience</a>
+          <a class="dropdown-item text-white" href="#">Achievement</a>
+           <a class="dropdown-item text-white" href="#">Research Paper</a>
+          <div class="dropdown-divider"></div>
+        </div>
+        </div> 
+      
+      
+       <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+        
+      </li>
+    </ul>
+    
+  </div>
+  <marquee behavior="scroll" direction="left" class="text-white">This is me Azizur Rahman Chy Ayan</marquee>
+
+</nav>
+<!--end navbar-->
+<!--about me-->
+
+
+{% block content %}
+{% endblock content %}
+
+
+
+
+<!--footer-->
+
+<div class="jumbotron mt-5 bg-dark text-white">
+  <h1 class="display-5">Jumbo heading</h1>
+  <p class="lead">Jumbo helper text</p>
+  
+</div>
+
+</div>
+<!--end container-->
+
+ <script>  
+          
+        // Function to toggle the plus menu into minus  
+        function myFunction(x) {  
+            x.classList.toggle("fa-minus-circle");  
+        }  
+
+        document.getElementById('wrapper').onclick = function() {
+
+    var className = ' ' + wrapper.className + ' ';
+
+    this.className = ~className.indexOf(' active ') ?
+                         className.replace(' active ', ' ') :
+                         this.className + ' active';
+};
+
+document.getElementById('wrapper2').onclick = function() {
+
+    var className = ' ' + wrapper2.className + ' ';
+
+    this.className = ~className.indexOf(' active ') ?
+                         className.replace(' active ', ' ') :
+                         this.className + ' active';
+}
+
+document.getElementById('wrapper3').onclick = function() {
+
+    var className = ' ' + wrapper3.className + ' ';
+
+    this.className = ~className.indexOf(' active ') ?
+                         className.replace(' active ', ' ') :
+                         this.className + ' active';
+}
+    </script> 
+
+</body>
+</html>
