@@ -28,11 +28,14 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    {% url 'home' as home %}
+      <li class="nav-item {% if request.path == home %}active{% endif %}">
+        <a class="nav-link" href="{{ home }}">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Skills</a>
+       {% url 'skill' as skill%}
+      <li class="nav-item {% if request.path == skill %}active{% endif %}" >
+
+        <a class="nav-link" href="{% url 'skill' %}">Skills</a>
       </li>
       
 
@@ -64,15 +67,15 @@
         </div>
         </div> 
       
-      
-       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+      {% url 'contact' as contact%}
+       <li class="nav-item {% if request.path == contact %}active{% endif %}">
+        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
         
       </li>
     </ul>
     
   </div>
-  <marquee behavior="scroll" direction="left" class="text-white">4 tips : 1.Work on basics. 2.You learn more by helping others. 3.Don't 
+  <marquee behavior="scroll" direction="left" class="text-white" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">4 tips : 1.Work on basics. 2.You learn more by helping others. 3.Don't 
   compare yourself with others. 4.work until your idol become your rivals</marquee>
 
 </nav>
@@ -80,8 +83,145 @@
 <!--about me-->
 
 
+ <div class="row mt-5 text-center">
+    <div class="col-sm-3">
+    
+    <h4 class="text-center text-style mb-3">About Me</h4>
+    <hr>
+    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw" alt="Cinque Terre"> <hr>
+      <span class="text-style-two">Name : Azizur Rahman</span></br>
+      <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> Student At <br><i class="fa fa-university" aria-hidden="true"></i> Metropolitan University,<br> <i class="fa fa-globe" aria-hidden="true"></i> Bangladesh</span></br>
+<span class="text-style-two"><a href="mailto:webmaster@example.com" class="text-dark"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
+<span class="text-style-two"><a href="tel:123-456-7890" class="text-dark"><i class="fa fa-phone-square" aria-hidden="true"></i> 01759773446</a></span><br>
+<a href="#" class="btn btn-info mt-2">Download CV</a>
+<hr>
+<h4 class="text-center text-style">Find Me</h4>
+<hr>
+<marquee behavior="scroll" direction="down" value="Slower" class="text-center" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+
+<span class="text-style-two"><a href="https://github.com/ayanchyaziz123" target="_blank" class="text-dark"><i class="fa fa-github" aria-hidden="true"></i>
+ github</a></span><br>
+ <span class="text-style-two"><a href="https://www.linkedin.com/in/azizur-rahman-720636165/" target="_blank" class="text-dark"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+ linkedin</a></span><br>
+ <span class="text-style-two"><a href="https://www.codechef.com/users/ayan_mu44thc" target="_blank" class="text-dark"><i class="fa fa-code" aria-hidden="true"></i>
+codecheaf</a></span><br>
+ <span class="text-style-two"><a href="https://www.youtube.com/channel/UCOdpQOJytA5J-pyxryFpoTA/playlists" target="_blank" class="text-dark"><i class="fa fa-youtube" aria-hidden="true"></i>
+youtube</a></span><br>
+ <span class="text-style-two"><a href="https://www.instagram.com/imayanchyaziz/" target="_blank" class="text-dark"><i class="fa fa-instagram" aria-hidden="true"></i>
+instagram</a></span><br>
+
+</marquee>
+ <hr>
+    </div>
+    
+
+
 {% block content %}
 {% endblock content %}
+
+
+
+
+ <h3 class="text-center mt-5 text-style"> Recent Project</h3>
+ <p class="text-center">recent projects were made by me<p/>
+  <div class="row mt-5">
+ 
+
+    <div class="col-sm-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+
+  </div>
+</div>
+
+
+
+    </div>
+    <div class="col-sm-3">
+
+<div class="card shadow ">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+
+  </div>
+</div>
+
+    </div>
+    <div class="col-sm-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+   
+  </div>
+</div>
+    </div>
+
+
+        <div class="col-sm-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+  
+  </div>
+</div>
+    </div>
+        <div class="col-sm-3 mt-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+  
+  </div>
+</div>
+    </div>
+        <div class="col-sm-3 mt-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+  </div>
+</div>
+    </div>
+        <div class="col-sm-3 mt-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+
+  </div>
+</div>
+    </div>
+        <div class="col-sm-3 mt-3">
+
+<div class="card shadow">
+  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+  <div class="card-img-overlay text-center">
+    <h4 class="card-title text-white">John Doe</h4>
+    <p class="card-text text-white">Some example text.</p>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <hr>
 
 
 
