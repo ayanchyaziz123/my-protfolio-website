@@ -68,7 +68,7 @@
         </div> 
       
       {% url 'contact' as contact%}
-       <li class="nav-item {% if request.path == contact %}active{% endif %}">
+       <li class="nav-item {% if request.path == contact %}active ul{% endif %}">
         <a class="nav-link" href="{% url 'contact' %}">Contact</a>
         
       </li>
