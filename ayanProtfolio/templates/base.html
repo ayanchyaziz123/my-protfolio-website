@@ -36,9 +36,9 @@
       </li>
 
 
-    {% url 'certificate' as certificate %}
-      <li class="nav-item {% if request.path == certificate %}active{% endif %}">
-        <a class="nav-link" href="{{ certificate }}">Certificate <span class="sr-only">(current)</span></a>
+    {% url 'education' as education %}
+      <li class="nav-item {% if request.path == education %}active{% endif %}">
+        <a class="nav-link" href="{{ education }}">Education <span class="sr-only">(current)</span></a>
       </li>
       
       
@@ -65,7 +65,8 @@
             <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
           <a class="dropdown-item text-white" href="#">Testimonial</a>
           <a class="dropdown-item text-white" href="#">Exprience</a>
-          <a class="dropdown-item text-white" href="#">Education</a>
+          {% url 'certificate' as certificate %}
+          <a class="dropdown-item text-white {% if request.path == certificate %}active{% endif %}" href="{{ certificate }}">certificate</a>
           <a class="dropdown-item text-white" href="#">Achievement</a>
            <a class="dropdown-item text-white" href="#">Research Paper</a>
           <div class="dropdown-divider"></div>
@@ -89,11 +90,21 @@
 
 
  <div class="row mt-5">
-    <div class="col-sm-3">
+   
+    
+
+
+{% block content %}
+{% endblock content %}
+
+
+
+
+ <div class="col-sm-3 text-center">
     
     <h4 class="text-center text-style mb-3">About Me</h4>
     <hr>
-    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw ml-md-5" alt="Cinque Terre"> <hr>
+    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw " alt="Cinque Terre"> <hr>
     <div class="ml-md-4">
       <span class="text-style-two"> <i class="fa fa-user" aria-hidden="true"></i>  Azizur Rahman</span></br>
       <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> Student At <br><i class="fa fa-university" aria-hidden="true"></i> Metropolitan University,<br> <i class="fa fa-globe" aria-hidden="true"></i> Bangladesh</span></br>
@@ -120,11 +131,9 @@ instagram</a></span><br>
 </marquee>
  <hr>
     </div>
-    
 
 
-{% block content %}
-{% endblock content %}
+
 
 </div>
 

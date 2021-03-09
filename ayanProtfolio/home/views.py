@@ -9,4 +9,6 @@ def skill(request):
 def contact(request):
     return render(request, 'contact.html')  
 def certificate(request):
-    return render(request, 'certificate.html')         
+    return render(request, 'certificate.html')    
+def education(request):
+    return render(request, 'education.html')           
