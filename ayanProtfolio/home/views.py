@@ -7,4 +7,6 @@ def home(request):
 def skill(request):
     return render(request, 'skill.html')    
 def contact(request):
-    return render(request, 'contact.html')     
+    return render(request, 'contact.html')  
+def certificate(request):
+    return render(request, 'certificate.html')         

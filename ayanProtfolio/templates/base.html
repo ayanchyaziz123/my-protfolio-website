@@ -36,9 +36,9 @@
       </li>
 
 
-    {% url 'home' as home %}
-      <li class="nav-item {% if request.path == home %}active{% endif %}">
-        <a class="nav-link" href="{{ home }}">Certificate <span class="sr-only">(current)</span></a>
+    {% url 'certificate' as certificate %}
+      <li class="nav-item {% if request.path == certificate %}active{% endif %}">
+        <a class="nav-link" href="{{ certificate }}">Certificate <span class="sr-only">(current)</span></a>
       </li>
       
       
