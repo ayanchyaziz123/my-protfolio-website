@@ -21,22 +21,26 @@
 <div class="container">
 <!--start navbar-->
   <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Download Cv</a>
+  <a class="navbar-brand" href="{% url 'home' %}"><i class="fa fa-rss" aria-hidden="true"></i> ARC</a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav navbar-nav mr-auto">
-    {% url 'home' as home %}
-      <li class="nav-item {% if request.path == home %}active{% endif %}">
-        <a class="nav-link" href="{{ home }}">Home <span class="sr-only">(current)</span></a>
-      </li>
-       {% url 'skill' as skill%}
+    
+     {% url 'skill' as skill%}
       <li class="nav-item {% if request.path == skill %}active{% endif %}" >
 
         <a class="nav-link" href="{% url 'skill' %}">Skills</a>
       </li>
+
+
+    {% url 'home' as home %}
+      <li class="nav-item {% if request.path == home %}active{% endif %}">
+        <a class="nav-link" href="{{ home }}">Certificate <span class="sr-only">(current)</span></a>
+      </li>
+      
       
 
        <div class="dropdown"> 
@@ -61,6 +65,7 @@
             <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
           <a class="dropdown-item text-white" href="#">Testimonial</a>
           <a class="dropdown-item text-white" href="#">Exprience</a>
+          <a class="dropdown-item text-white" href="#">Education</a>
           <a class="dropdown-item text-white" href="#">Achievement</a>
            <a class="dropdown-item text-white" href="#">Research Paper</a>
           <div class="dropdown-divider"></div>
@@ -83,17 +88,19 @@
 <!--about me-->
 
 
- <div class="row mt-5 text-center">
+ <div class="row mt-5">
     <div class="col-sm-3">
     
     <h4 class="text-center text-style mb-3">About Me</h4>
     <hr>
-    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw" alt="Cinque Terre"> <hr>
-      <span class="text-style-two">Name : Azizur Rahman</span></br>
+    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw ml-md-5" alt="Cinque Terre"> <hr>
+    <div class="ml-md-4">
+      <span class="text-style-two"> <i class="fa fa-user" aria-hidden="true"></i>  Azizur Rahman</span></br>
       <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> Student At <br><i class="fa fa-university" aria-hidden="true"></i> Metropolitan University,<br> <i class="fa fa-globe" aria-hidden="true"></i> Bangladesh</span></br>
 <span class="text-style-two"><a href="mailto:webmaster@example.com" class="text-dark"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
 <span class="text-style-two"><a href="tel:123-456-7890" class="text-dark"><i class="fa fa-phone-square" aria-hidden="true"></i> 01759773446</a></span><br>
 <a href="#" class="btn btn-info mt-2">Download CV</a>
+</div>
 <hr>
 <h4 class="text-center text-style">Find Me</h4>
 <hr>
