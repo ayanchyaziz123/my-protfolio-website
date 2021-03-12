@@ -16,7 +16,7 @@ def home(request):
 def fullProject(request, slug):
     projects = Project.objects.filter(id=slug).first()  
     project = Project.objects.all()
-    paginator = Paginator(project, 1)
+    paginator = Paginator(project, 3)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
@@ -27,7 +27,7 @@ def fullProject(request, slug):
 
 def skill(request):
     project = Project.objects.all()
-    paginator = Paginator(project, 1)
+    paginator = Paginator(project, 3)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
@@ -36,7 +36,7 @@ def skill(request):
     return render(request, 'skill.html', context)    
 def contact(request):
     project = Project.objects.all()
-    paginator = Paginator(project, 1)
+    paginator = Paginator(project, 3)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
@@ -47,7 +47,7 @@ def certificate(request):
     return render(request, 'certificate.html')    
 def education(request):
     project = Project.objects.all()
-    paginator = Paginator(project, 1)
+    paginator = Paginator(project, 3)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
