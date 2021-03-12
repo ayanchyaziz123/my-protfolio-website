@@ -51,7 +51,6 @@ a{
 .fas { 
    
     color:white; 
-    margin-left: 100px;
 } 
 
 .im-size{
@@ -72,8 +71,17 @@ a{
 }
 
 .mll{
-    margin-left: -30px;
+    color: white;
 }
+.tt{
+    font-size:20px !important;
+    
+}
+.text-dar{
+    color: #008080;
+}
+
+
 
 
 

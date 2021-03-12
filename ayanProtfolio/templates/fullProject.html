@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="col-sm-9">
+<h4 class="text-center text-style mb-3">Full Project</h4>
+<hr>
+<h5 class="text-style2 text-center mt-2">{{projects.projectTitle}}</h5>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="{{projects.projectVideoUrl}}" allowfullscreen></iframe>
+</div>
+<hr>
+<p class="text-style2 text-center">{{projects.projectDescriptions}}</p>
+
+   
+</div>
+
+
+
+
+
+{% endblock content %}

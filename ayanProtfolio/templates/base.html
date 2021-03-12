@@ -21,7 +21,8 @@
 <div class="container bg-white">
 <!--start navbar-->
   <nav class="navbar sticky-top navbar-expand-lg  navbar-dark bg-dark ">
-  <a class="navbar-brand" href="{% url 'home' %}"><i class="fa fa-rss" aria-hidden="true"></i> ARC</a>
+  {% url 'home' as home%}
+  <a class="navbar-brand {% if request.path == home %}active{% endif %}" href="{% url 'home' %}"> HOME </a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -32,29 +33,25 @@
      {% url 'skill' as skill%}
       <li class="nav-item {% if request.path == skill %}active{% endif %}" >
 
-        <a class="nav-link" href="{% url 'skill' %}">Skill</a>
+        <a class="nav-link" href="{% url 'skill' %}">SKILL</a>
       </li>
 
 
     {% url 'education' as education %}
       <li class="nav-item {% if request.path == education %}active{% endif %}">
-        <a class="nav-link" href="{{ education }}">Education <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{ education }}">EDUCATION <span class="sr-only">(current)</span></a>
       </li>
       
       
          <li class="nav-item dropdown">
-       <div class="dropdown"> 
+   
               
             <!-- Dropdown button -->
 
             <a href="javascript:void(0);"  role="button"
-                    class="nav-link dropdown-toggle text-white" 
-                    data-toggle="dropdown" onclick="myFunction2(this)">More 
-                      
-                    <!-- Chnaging the default icon with toggle-->
-                    <i onclick="myFunction(this)"
-                       class="fa fa-plus-circle fas"></i> 
-            </a> 
+                    class="nav-link dropdown-toggle mll" 
+                    data-toggle="dropdown">MORE  <i onclick="myFunction(this)"
+                       class="fa fa-plus-circle fas"></i></a> 
               
             <!-- Dropdown options -->
             <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
@@ -65,14 +62,14 @@
           <a class="dropdown-item text-white" href="#">Achievement</a>
            <a class="dropdown-item text-white" href="#">Research Paper</a>
           <div class="dropdown-divider"></div>
-        </div>
+
         </div> 
 
         </li>
       
       {% url 'contact' as contact%}
        <li class="nav-item {% if request.path == contact %}active ul{% endif %}">
-        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
         
       </li>
     </ul>
@@ -106,7 +103,7 @@
       <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> Student At <br><i class="fa fa-university" aria-hidden="true"></i> Metropolitan University,<br> <i class="fa fa-globe" aria-hidden="true"></i> Bangladesh</span></br>
 <span class="text-style-two"><a href="mailto:webmaster@example.com" class="text-dark"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
 <span class="text-style-two"><a href="tel:123-456-7890" class="text-dark"><i class="fa fa-phone-square" aria-hidden="true"></i> 01759773446</a></span><br>
-<a href="#" class="btn btn-info mt-2">Download CV</a>
+<a href="/static/MyCV.pdf" class="btn btn-info mt-2" download>Download CV</a>
 </div>
 <hr>
 <h4 class="text-center text-style">Find Me</h4>
@@ -139,101 +136,72 @@ instagram</a></span><br>
  <h3 class="text-center mt-5 text-style"> Recent Project</h3>
  <p class="text-center">recent projects were made by me<p/>
   <div class="row mt-5">
- 
+    
+    {% for project in project %}
 
     <div class="col-sm-3">
+    <a href="#">
 
-<div class="card shadow">
-  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
+<div class="card shadow" style="border-radius: 25px;">
+  <img class="card-img-top" src="{{project.get_photo_url}}" style="max-height: 130px;" alt="Card image cap" alt="Card image">
   <div class="card-img-overlay text-center">
-    <h4 class="card-title text-white">John Doe</h4>
-    <p class="card-text text-white">Some example text.</p>
+    <a href="{% url 'fullProject' project.id %}" class="text-warning text-style-two tt">{{project.projectTitle |truncatechars:20}}</a></br>
+    <a href="{% url 'fullProject' project.id %}" class="text-warning text-style-two">{{project.projectDescriptions |truncatechars:43}}</a>
 
   </div>
 </div>
+</a>
 
 
 
     </div>
-    <div class="col-sm-3">
+    {% endfor %}
 
-<div class="card shadow ">
-  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
-  <div class="card-img-overlay text-center">
-    <h4 class="card-title text-white">John Doe</h4>
-    <p class="card-text text-white">Some example text.</p>
 
+    
   </div>
-</div>
 
-    </div>
-    <div class="col-sm-3">
+  <!--pagination-->
+<div class="mt-4">
+ <nav aria-label="Page navigation example">
 
-<div class="card shadow">
-  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
-  <div class="card-img-overlay text-center">
-    <h4 class="card-title text-white">John Doe</h4>
-    <p class="card-text text-white">Some example text.</p>
-   
-  </div>
-</div>
-    </div>
+       {% if project.has_other_pages %}
+  <ul class="pagination">
+    {% if project.has_previous %}
 
+      <li class="page-item ">
+      <a class="page-link" href="?page={{ project.previous_page_number }}" tabindex="-1">Previous</a>
+    </li>
 
-        <div class="col-sm-3">
+    {% else %}
+        <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    {% endif %}
+    {% for i in project.paginator.page_range %}
+      {% if project.number == i %}
 
-<div class="card shadow">
-  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
-  <div class="card-img-overlay text-center">
-    <h4 class="card-title text-white">John Doe</h4>
-    <p class="card-text text-white">Some example text.</p>
-  
-  </div>
-</div>
-    </div>
-        <div class="col-sm-3 mt-3">
+      <li class="page-item active">
+      <a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a>
+    </li>
+      {% else %}
+      <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if project.has_next %}
+       <li class="page-item">
+      <a class="page-link" href="?page={{ project.next_page_number }}">Next</a>
+    </li>
+    {% else %}
+      <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Next</a>
+    </li>
+    {% endif %}
+  </ul>
+{% endif %}
+</nav>
 
-<div class="card shadow">
-  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
-  <div class="card-img-overlay text-center">
-    <h4 class="card-title text-white">John Doe</h4>
-    <p class="card-text text-white">Some example text.</p>
-  
-  </div>
-</div>
-    </div>
-        <div class="col-sm-3 mt-3">
-
-<div class="card shadow">
-  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
-  <div class="card-img-overlay text-center">
-    <h4 class="card-title text-white">John Doe</h4>
-    <p class="card-text text-white">Some example text.</p>
-  </div>
-</div>
-    </div>
-        <div class="col-sm-3 mt-3">
-
-<div class="card shadow">
-  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
-  <div class="card-img-overlay text-center">
-    <h4 class="card-title text-white">John Doe</h4>
-    <p class="card-text text-white">Some example text.</p>
-
-  </div>
-</div>
-    </div>
-        <div class="col-sm-3 mt-3">
-
-<div class="card shadow">
-  <img class="card-img-top" src="https://cnet2.cbsistatic.com/img/-e95qclc6pwSnGE2YccC2oLDW_8=/1200x675/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg" alt="Card image cap" alt="Card image">
-  <div class="card-img-overlay text-center">
-    <h4 class="card-title text-white">John Doe</h4>
-    <p class="card-text text-white">Some example text.</p>
-  </div>
-</div>
-    </div>
-  </div>
+</div> <!--ending paginations-->
 
   <hr>
 
@@ -242,11 +210,12 @@ instagram</a></span><br>
 
 <!--footer-->
 
-<div class="jumbotron mt-5 bg-dark text-white">
-  <h1 class="display-5">Jumbo heading</h1>
-  <p class="lead">Jumbo helper text</p>
+<footer class="jumbotron mt-5 bg-dark text-white text-center">
+   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+  </div>
   
-</div>
+</footer>
 
 </div>
 <!--end container-->
