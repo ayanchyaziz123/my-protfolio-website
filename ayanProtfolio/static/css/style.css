@@ -5,7 +5,7 @@
     background-color: #006ba1 !important;
 }
 .text-style{
-    font-family: Trattatello, fantasy;
+    font-family:Courier New;
 }
 .text-style-two{
    font-family: Georgia, serif;
@@ -51,6 +51,7 @@ a{
 .fas { 
    
     color:white; 
+    margin-left: 100px;
 } 
 
 .im-size{
@@ -68,6 +69,10 @@ a{
 
 .imgg {
     max-width: 100%;
+}
+
+.mll{
+    margin-left: -30px;
 }
 
 
