@@ -229,5 +229,40 @@ instagram</a></span><br>
 
     </script> 
 
+     <script>
+      
+     function validateForm(){
+
+      var name =  document.forms["myForm"]["name"].value;
+      var email =  document.forms["myForm"]["email"].value;
+      var subject =  document.forms["myForm"]["subject"].value;
+      var message =  document.forms["myForm"]["message"].value;
+
+      if(name.length < 4){
+        document.getElementById("incorrect_name").innerHTML = "Name should be more than 3 characters";
+        return false;
+      }
+      if(name.length > 20){
+        document.getElementById("incorrect_name").innerHTML = "Name should be less than 20 characters";
+        return false;
+      }
+      if(email.length > 40){
+        document.getElementById("incorrect_email").innerHTML = "Email should be less than 40 characters";
+        return false;
+      }
+      if(subject.length < 6){
+        document.getElementById("incorrect_subject").innerHTML = "Subject should be more than 5 characters";
+        return false;
+      }
+      if(message.length < 6){
+        document.getElementById("incorrect_message").innerHTML = "Message should be more than 5 characters";
+        return false;
+      }
+     }
+
+
+
+    </script>
+
 </body>
 </html>

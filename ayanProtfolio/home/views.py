@@ -1,6 +1,8 @@
-from django.shortcuts import render
-from .models import Project
+from django.shortcuts import redirect, render
+from .models import Contact, Project
 from django.core.paginator import Paginator
+from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 
@@ -34,14 +36,27 @@ def skill(request):
         'project':project,
     }
     return render(request, 'skill.html', context)    
+
+
+
 def contact(request):
-    project = Project.objects.all()
-    paginator = Paginator(project, 3)
-    page = request.GET.get('page')
-    project = paginator.get_page(page)
-    context = {
-        'project':project,
-    }
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        data  = Contact(name=name, email=email, subject=subject, message=message)
+        data.save()
+        return redirect('home')
+        #print(name, email, subject, message)
+    else:
+        project = Project.objects.all()
+        paginator = Paginator(project, 3)
+        page = request.GET.get('page')
+        project = paginator.get_page(page)
+        context = {
+            'project':project,
+        }
     return render(request, 'contact.html', context)  
 def certificate(request):
     return render(request, 'certificate.html')    

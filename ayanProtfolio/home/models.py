@@ -23,3 +23,10 @@ class Project(models.Model):
             return self.projectImage.url
         else:
             return "/static/no-logo.jpg"
+
+class Contact(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.EmailField()
+    subject = models.CharField(max_length=200)
+    message = models.CharField(max_length=500)
+    reply = models.BooleanField(default=False)
