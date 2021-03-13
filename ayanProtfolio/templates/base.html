@@ -81,7 +81,15 @@
 <!--end navbar-->
 <!--about me-->
 
+{% for message in messages %}
 
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert" >
+  <strong><i class="fa fa-comments" aria-hidden="true"></i> Message : </strong> {{ message }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+ {% endfor %}
  <div class="row mt-5">
    
     
@@ -93,7 +101,7 @@
 
 
 
- <div class="col-sm-3 text-center">
+ <div class="col-sm-3 text-center mb-5">
     
     <h4 class="text-center text-style mb-3">About Me</h4>
     <hr>
@@ -133,7 +141,7 @@ instagram</a></span><br>
 
 
 
- <h3 class="text-center mt-5 text-style"> Recent Project</h3>
+ <h3 class="text-center mt-5 text-style mt-5"> Recent Project</h3>
  <p class="text-center">recent projects were made by me<p/>
   <div class="row mt-5">
     

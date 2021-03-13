@@ -3,6 +3,7 @@ from .models import Contact, Project
 from django.core.paginator import Paginator
 from django.core.mail import BadHeaderError, send_mail
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib import messages
 
 # Create your views here.
 
@@ -18,7 +19,7 @@ def home(request):
 def fullProject(request, slug):
     projects = Project.objects.filter(id=slug).first()  
     project = Project.objects.all()
-    paginator = Paginator(project, 3)
+    paginator = Paginator(project, 4)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
@@ -29,7 +30,7 @@ def fullProject(request, slug):
 
 def skill(request):
     project = Project.objects.all()
-    paginator = Paginator(project, 3)
+    paginator = Paginator(project, 4)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
@@ -47,11 +48,12 @@ def contact(request):
         message = request.POST['message']
         data  = Contact(name=name, email=email, subject=subject, message=message)
         data.save()
+        messages.success(request, "Your message was sent successfully.Thanks to you")
         return redirect('home')
         #print(name, email, subject, message)
     else:
         project = Project.objects.all()
-        paginator = Paginator(project, 3)
+        paginator = Paginator(project, 4)
         page = request.GET.get('page')
         project = paginator.get_page(page)
         context = {
@@ -62,7 +64,7 @@ def certificate(request):
     return render(request, 'certificate.html')    
 def education(request):
     project = Project.objects.all()
-    paginator = Paginator(project, 3)
+    paginator = Paginator(project, 4)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
