@@ -1,1 +1,0 @@
-web: gunicorn ayanProtfolio.wsgi --log-file -

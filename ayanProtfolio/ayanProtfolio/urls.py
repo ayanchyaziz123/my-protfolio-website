@@ -20,7 +20,12 @@ from . import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+admin.site.site_header = "Azizur Rahman Ayan"
+admin.site.site_title = "Azizur Rahman Ayan"
+admin.site.index_title = "Welcomee Azizur Rahman Ayan"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
+    path('^ckeditor/', include('ckeditor_uploader.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

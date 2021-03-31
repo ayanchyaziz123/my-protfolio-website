@@ -9,7 +9,7 @@ from django.contrib import messages
 
 def home(request):
     project = Project.objects.all()
-    paginator = Paginator(project, 4)
+    paginator = Paginator(project, 6)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
@@ -19,7 +19,7 @@ def home(request):
 def fullProject(request, slug):
     projects = Project.objects.filter(id=slug).first()  
     project = Project.objects.all()
-    paginator = Paginator(project, 4)
+    paginator = Paginator(project, 6)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
@@ -30,7 +30,7 @@ def fullProject(request, slug):
 
 def skill(request):
     project = Project.objects.all()
-    paginator = Paginator(project, 4)
+    paginator = Paginator(project, 6)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {
@@ -53,7 +53,7 @@ def contact(request):
         #print(name, email, subject, message)
     else:
         project = Project.objects.all()
-        paginator = Paginator(project, 4)
+        paginator = Paginator(project, 6)
         page = request.GET.get('page')
         project = paginator.get_page(page)
         context = {
@@ -64,7 +64,7 @@ def certificate(request):
     return render(request, 'certificate.html')    
 def education(request):
     project = Project.objects.all()
-    paginator = Paginator(project, 4)
+    paginator = Paginator(project, 6)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {

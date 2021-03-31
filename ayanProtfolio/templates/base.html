@@ -16,13 +16,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 </head>
-<body style="background-color: #F0FFF0;">
+<body style="background-color: #d8d8d8;">
 <!--container-->
-<div class="container bg-white">
+<div class="container">
+<div class="ml-md-5 mr-md-5 bg-white border border-secondary mb-2">
 <!--start navbar-->
-  <nav class="navbar sticky-top navbar-expand-lg  navbar-dark bg-dark ">
+  <nav class="navbar sticky-top navbar-expand-lg  navbar-dark bg-dark pb-0 pt-0 shadow" >
   {% url 'home' as home%}
-  <a class="navbar-brand {% if request.path == home %}active{% endif %}" href="{% url 'home' %}"> HOME </a>
+  <a class="navbar-brand {% if request.path == home %}active{% endif %}" href="{% url 'home' %}"> Home </a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -33,13 +34,13 @@
      {% url 'skill' as skill%}
       <li class="nav-item {% if request.path == skill %}active{% endif %}" >
 
-        <a class="nav-link" href="{% url 'skill' %}">SKILL</a>
+        <a class="nav-link" href="{% url 'skill' %}">Skill</a>
       </li>
 
 
     {% url 'education' as education %}
       <li class="nav-item {% if request.path == education %}active{% endif %}">
-        <a class="nav-link" href="{{ education }}">EDUCATION <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{ education }}">Education <span class="sr-only">(current)</span></a>
       </li>
       
       
@@ -50,7 +51,7 @@
 
             <a href="javascript:void(0);"  role="button"
                     class="nav-link dropdown-toggle mll" 
-                    data-toggle="dropdown">MORE  <i onclick="myFunction(this)"
+                    data-toggle="dropdown">More  <i onclick="myFunction(this)"
                        class="fa fa-plus-circle fas"></i></a> 
               
             <!-- Dropdown options -->
@@ -69,7 +70,7 @@
       
       {% url 'contact' as contact%}
        <li class="nav-item {% if request.path == contact %}active ul{% endif %}">
-        <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
         
       </li>
     </ul>
@@ -101,32 +102,32 @@
 
 
 
- <div class="col-sm-3 text-center mb-5">
+ <div class="col-sm-3 text-center mb-5 ml-md-5">
     
     <h4 class="text-center text-style mb-3">About Me</h4>
     <hr>
-    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw " alt="Cinque Terre"> <hr>
+    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw border border-secondary shadow" alt="Cinque Terre"> <hr>
     <div class="ml-md-4">
-      <span class="text-style-two"> <i class="fa fa-user" aria-hidden="true"></i>  Azizur Rahman</span></br>
-      <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> Student At <br><i class="fa fa-university" aria-hidden="true"></i> Metropolitan University,<br> <i class="fa fa-globe" aria-hidden="true"></i> Bangladesh</span></br>
+      <span class="text-style-two"> <i class="fa fa-user" aria-hidden="true"></i>  Azizur Rahman (Ayan)</span></br>
+      <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> B.Sc. Engineering in CSE <br>
 <span class="text-style-two"><a href="mailto:webmaster@example.com" class="text-dark"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
 <span class="text-style-two"><a href="tel:123-456-7890" class="text-dark"><i class="fa fa-phone-square" aria-hidden="true"></i> 01759773446</a></span><br>
-<a href="/static/MyCV.pdf" class="btn btn-info mt-2" download>Download CV</a>
+<a href="/static/MyCV.pdf" class="btn-cv btn btn-secondary  mt-2"  download>Download CV</a>
 </div>
 <hr>
 <h4 class="text-center text-style">Find Me</h4>
 <hr>
 <marquee behavior="scroll" direction="down" value="Slower" class="text-center" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
 
-<span class="text-style-two"><a href="https://github.com/ayanchyaziz123" target="_blank" class="text-dark"><i class="fa fa-github" aria-hidden="true"></i>
+<span class="text-style-two"><a href="https://github.com/ayanchyaziz123" target="_blank" class="text-style-two"><i class="fa fa-github" aria-hidden="true"></i>
  github</a></span><br>
- <span class="text-style-two"><a href="https://www.linkedin.com/in/azizur-rahman-720636165/" target="_blank" class="text-dark"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+ <span class="text-style-two"><a href="https://www.linkedin.com/in/azizur-rahman-720636165/" target="_blank" class="text-style-two"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
  linkedin</a></span><br>
- <span class="text-style-two"><a href="https://www.codechef.com/users/ayan_mu44thc" target="_blank" class="text-dark"><i class="fa fa-code" aria-hidden="true"></i>
+ <span class="text-style-two"><a href="https://www.codechef.com/users/ayan_mu44thc" target="_blank" class="text-style-two"><i class="fa fa-code" aria-hidden="true"></i>
 codecheaf</a></span><br>
- <span class="text-style-two"><a href="https://www.youtube.com/channel/UCOdpQOJytA5J-pyxryFpoTA/playlists" target="_blank" class="text-dark"><i class="fa fa-youtube" aria-hidden="true"></i>
+ <span class="text-style-two"><a href="https://www.youtube.com/channel/UCOdpQOJytA5J-pyxryFpoTA/playlists" target="_blank" class="text-style-two"><i class="fa fa-youtube" aria-hidden="true"></i>
 youtube</a></span><br>
- <span class="text-style-two"><a href="https://www.instagram.com/imayanchyaziz/" target="_blank" class="text-dark"><i class="fa fa-instagram" aria-hidden="true"></i>
+ <span class="text-style-two"><a href="https://www.instagram.com/imayanchyaziz/" target="_blank" class="text-style-two"><i class="fa fa-instagram" aria-hidden="true"></i>
 instagram</a></span><br>
 
 </marquee>
@@ -139,24 +140,29 @@ instagram</a></span><br>
 </div>
 
 
-
+<div style="margin-top:130px;">
+</div>
 
  <h3 class="text-center mt-5 text-style mt-5"> Recent Project</h3>
  <p class="text-center">recent projects were made by me<p/>
-  <div class="row mt-5">
+  <div class="row mt-5 ml-1 mr-1">
     
     {% for project in project %}
 
-    <div class="col-sm-3">
+    <div class="col-sm-4 mt-2" style="border-radius: 25px;">
     <a href="#">
 
-<div class="card shadow" style="border-radius: 25px;">
-  <img class="card-img-top" src="{{project.get_photo_url}}" style="max-height: 130px;" alt="Card image cap" alt="Card image">
-  <div class="card-img-overlay text-center">
-    <a href="{% url 'fullProject' project.id %}" class="text-warning text-style-two tt">{{project.projectTitle |truncatechars:20}}</a></br>
-    <a href="{% url 'fullProject' project.id %}" class="text-warning text-style-two">{{project.projectDescriptions |truncatechars:43}}</a>
+<div class="card text-white  mb-3  shadow border border-secondary rounded">
 
+ <div class="inner">
+ <a href="{% url 'fullProject' project.id %}">
+
+   </div>
+  <div class="card-body">
+  <div class="card-title"> <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two tt">{{project.projectTitle |truncatechars:20}}</a></br></div>
+    <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two">{{project.projectDescriptions |truncatechars:55}}</a>
   </div>
+
 </div>
 </a>
 
@@ -170,7 +176,7 @@ instagram</a></span><br>
   </div>
 
   <!--pagination-->
-<div class="mt-4">
+<div class="mt-4 ml-3">
  <nav aria-label="Page navigation example">
 
        {% if project.has_other_pages %}
@@ -189,7 +195,7 @@ instagram</a></span><br>
     {% for i in project.paginator.page_range %}
       {% if project.number == i %}
 
-      <li class="page-item active">
+      <li class="page-item active ac">
       <a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a>
     </li>
       {% else %}
@@ -218,12 +224,21 @@ instagram</a></span><br>
 
 <!--footer-->
 
-<footer class="jumbotron mt-5 bg-dark text-white text-center">
-   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
+
+<footer class="jumbotron mb-0 mt-5 bg-dark text-white text-center">
+<div class="text-center">
+<a href="https://github.com/ayanchyaziz123"><i class="fa fa-github pb-2  text-white mr-2 " aria-hidden="true"> Github</i></a>
+<a href="https://www.youtube.com/channel/UCOdpQOJytA5J-pyxryFpoTA"><i class="fa fa-youtube pb-2 text-white mr-2 " aria-hidden="true"> Youtube</i></a>
+<a href="https://github.com/ayanchyaziz123"><i class="fa fa-code pb-2 text-white mr-2 " aria-hidden="true"> Codecheaf</i></a>
+</div>
+   <div class="text-center " style="background-color: rgba(0, 0, 0, 0.2);">
+    Azizur Rahman Ayan
   </div>
   
+  
 </footer>
+
+</div>
 
 </div>
 <!--end container-->

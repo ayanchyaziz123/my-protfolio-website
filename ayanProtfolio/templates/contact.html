@@ -4,16 +4,16 @@
 
 {% block content %}
 
-<div class="col-sm-9">
+<div class="col-sm-8">
 <h4 class="text-center text-style mb-3">Contact</h4>
     <hr>
 
 
-<form class="ml-md-5" name="myForm" action="{% url 'contact' %}" method="POST" onsubmit="return validateForm()">
+<form class="ml-4 mr-2" name="myForm" action="{% url 'contact' %}" method="POST" onsubmit="return validateForm()">
 {% csrf_token %}
   <div class="form-group">
     <label for="exampleInputEmail1"  class="text-style-two ">Name</label>
-    <input type="text" class="form-control" id="name" name="name"  placeholder="Enter name" required>
+    <input type="text" class="form-control " id="name" name="name"  placeholder="Enter name" required>
     <p id="incorrect_name"></p>
   </div>
   <div class="form-group">
@@ -34,7 +34,7 @@
   </div>
   
 
-  <button type="submit" class="btn btn-info text-style-two">Submit</button>
+  <button type="submit" class="btn-cv btn btn-secondary">Submit</button>
 </form>
 
 
