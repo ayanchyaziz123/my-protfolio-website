@@ -9,7 +9,7 @@ from django.contrib import messages
 
 def home(request):
     project = Project.objects.all()
-    paginator = Paginator(project, 6)
+    paginator = Paginator(project, 4)
     page = request.GET.get('page')
     project = paginator.get_page(page)
     context = {

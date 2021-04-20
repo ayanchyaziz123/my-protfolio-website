@@ -16,14 +16,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 </head>
-<body style="background-color: #d8d8d8;">
-<!--container-->
-<div class="container">
-<div class="ml-md-5 mr-md-5 bg-white border border-secondary mb-2">
+<body style="background-color: #f5f5f5;">
+
 <!--start navbar-->
   <nav class="navbar sticky-top navbar-expand-lg  navbar-dark bg-dark pb-0 pt-0 shadow" >
+  <div class="container">
   {% url 'home' as home%}
-  <a class="navbar-brand {% if request.path == home %}active{% endif %}" href="{% url 'home' %}"> Home </a>
+  <a class="navbar-brand {% if request.path == home %}active{% endif %} ml-md-5" href="{% url 'home' %}"> Home </a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -76,10 +75,16 @@
     </ul>
     
   </div>
-
+</div>
 
 </nav>
 <!--end navbar-->
+
+
+<!--container-->
+<div class="container">
+<div class="ml-md-5 mr-md-5">
+
 <!--about me-->
 
 {% for message in messages %}
@@ -91,7 +96,7 @@
   </button>
 </div>
  {% endfor %}
- <div class="row mt-5">
+ <div class="row">
    
     
 
@@ -102,17 +107,19 @@
 
 
 
- <div class="col-sm-3 text-center mb-5 ml-md-5">
+ <div class="col-sm-3 text-center mb-5 mt-2">
     
     <h4 class="text-center text-style mb-3">About Me</h4>
     <hr>
-    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw border border-secondary shadow" alt="Cinque Terre"> <hr>
+    <div class="card shadow rounded  text-center">
+    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw border border-secondary shadow card-img-top mx-auto d-block mt-1" alt="Cinque Terre"> <hr>
     <div class="ml-md-4">
       <span class="text-style-two"> <i class="fa fa-user" aria-hidden="true"></i>  Azizur Rahman (Ayan)</span></br>
       <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> B.Sc. Engineering in CSE <br>
 <span class="text-style-two"><a href="mailto:webmaster@example.com" class="text-dark"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
 <span class="text-style-two"><a href="tel:123-456-7890" class="text-dark"><i class="fa fa-phone-square" aria-hidden="true"></i> 01759773446</a></span><br>
-<a href="/static/MyCV.pdf" class="btn-cv btn btn-secondary  mt-2"  download>Download CV</a>
+<a href="/static/MyCV.pdf" class="btn-cv btn btn-secondary  mt-2 mb-2"  download>Download CV</a>
+</div>
 </div>
 <hr>
 <h4 class="text-center text-style">Find Me</h4>
@@ -140,7 +147,7 @@ instagram</a></span><br>
 </div>
 
 
-<div style="margin-top:130px;">
+<div style="margin-top:70px;">
 </div>
 
  <h3 class="text-center mt-5 text-style mt-5"> Recent Project</h3>
@@ -149,18 +156,23 @@ instagram</a></span><br>
     
     {% for project in project %}
 
-    <div class="col-sm-4 mt-2" style="border-radius: 25px;">
+    <div class="col-sm-3 mt-2" style="border-radius: 25px;">
     <a href="#">
 
-<div class="card text-white  mb-3  shadow border border-secondary rounded">
+<div class="card text-white  mb-3  shadow  rounded">
+
+
 
  <div class="inner">
+
+ <img src={{project.projectImage.url}} alt="no img" class="card-img-top img-bor" style="max-height:100px;">
+
  <a href="{% url 'fullProject' project.id %}">
 
    </div>
   <div class="card-body">
-  <div class="card-title"> <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two tt">{{project.projectTitle |truncatechars:20}}</a></br></div>
-    <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two">{{project.projectDescriptions |truncatechars:55}}</a>
+  <div class="card-title"> <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two tt">{{project.projectTitle |truncatechars:15}}</a></br></div>
+    <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two">{{project.projectDescriptions |truncatechars:50}}</a>
   </div>
 
 </div>
@@ -222,6 +234,13 @@ instagram</a></span><br>
 
 
 
+
+
+</div>
+
+</div>
+<!--end container-->
+
 <!--footer-->
 
 
@@ -238,10 +257,6 @@ instagram</a></span><br>
   
 </footer>
 
-</div>
-
-</div>
-<!--end container-->
 
  <script>  
           
