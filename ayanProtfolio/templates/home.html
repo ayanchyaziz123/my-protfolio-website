@@ -52,12 +52,16 @@
   </a>
 </div> 
 <hr>
-
-      <p class="text-style-two ml-4 mr-2">
-My name is Azizur Rahman(Ayan) and I am currently a senior pursuing a Bachelor’s degree in CSE.
- I currently maintain a 3.50 CGPA and I will be graduating in dec 2021. As a student of CSE I got a  lot of courses that
-made me more productive.I like programming a lot.Python is my favourite programming language.
-      </p>
+    {% for myself in myself %}
+      <div class="text-style-two ml-4 mr-2">
+     
+      
+       <div>{{myself.body|safe}}</div>
+       
+    
+  
+      </div>
+        {% endfor %}
       <hr>
    
       </div>

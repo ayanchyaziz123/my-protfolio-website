@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="col-sm-9 mt-2">
+<h4 class="text-center text-style mb-3">Education</h4>
+    <hr>
+    <div class="card shadow rounded p-3 ">
+    {% for data in data %}
+    
+     <div>{{data.body | safe}}</div>
+    
+    {% endfor %}
+   
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}

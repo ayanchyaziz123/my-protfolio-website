@@ -33,3 +33,27 @@ class Contact(models.Model):
     subject = models.CharField(max_length=200)
     message = models.CharField(max_length=500)
     reply = models.BooleanField(default=False)
+
+class MySelf(models.Model):
+    body = RichTextUploadingField(blank=True, null=True)
+
+class Skill(models.Model):
+    body = RichTextUploadingField(blank=True, null=True)
+
+class Education(models.Model):
+    body = RichTextUploadingField(blank=True, null=True)   
+
+class Testimonial(models.Model):
+    body = RichTextUploadingField(blank=True, null=True)
+
+class ResearchPaper(models.Model):
+    body = RichTextUploadingField(blank=True, null=True)
+
+class Exprience(models.Model):
+    body = RichTextUploadingField(blank=True, null=True) 
+
+class Achievement(models.Model):
+    body = RichTextUploadingField(blank=True, null=True)  
+
+class Certificate(models.Model):
+    body = RichTextUploadingField(blank=True, null=True)  
