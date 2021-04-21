@@ -3,10 +3,10 @@ body{
     font-size: 18px;;
 }
 .bg-dark{
-    background-color: #0e76a8 !important;
+    background-color: #fff !important;
 }
 .bg-info{
-    background-color: #0e76a8 !important;
+    background-color: #46344E !important;
 }
 .text-style{
     font-family:Courier New;
@@ -40,13 +40,13 @@ a{
  }
  */
  .btn-secondary{
-     background-color: #0e76a8 !important;
-     border-color: #0e76a8;
+     background-color: #46344E !important;
+     border-color: #46344E !important;
  }
  .btn-secondary:hover{
 
-    background-color: #0e76a8 !important;
-    border-color: #0e76a8 !important;
+    background-color: #46344E !important;
+    border-color: #46344E !important;
 
  }
 
@@ -89,7 +89,7 @@ a{
     background-color: #b9af9f  !important;
 }
 .bg-primary{
-    background-color: #0e76a8 !important;
+    background-color: #46344E !important;
 
 }
 /*
@@ -113,18 +113,19 @@ a{
 }
 .example .pagination>li>a,
 .example .pagination>li>span {
-  border: 1px solid #0e76a8 !important;
+  border: 1px solid #5e31b88 !important;
 }
 .pagination>li.active>a {
-  background: #0e76a8 !important;
+  background: #46344E !important;
   color: #fff !important;
 }
 .page-item .page-link{
-    color: #0e76a8 !important;
+    color: #46344E !important;
 }
 
 .navbar {
-	color: #fff;
+	color: black;
+    background: #fff !important;
 	padding: 5px 16px;
 	border-radius: 0;
 	border: none;
@@ -137,16 +138,16 @@ a{
 	margin-right: 10px;
 }
 .navbar .navbar-brand {
-	color: #efe5ff;
 	padding-left: 0;
 	padding-right: 50px;
-	font-size: 24px;		
+	font-size: 20px;
+    color: #46344E !important ;		
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
 	color: #fff;
 }
 .navbar .navbar-brand i {
-	font-size: 25px;
+	font-size: 20px;
 	margin-right: 5px;
 }
 .search-box {
@@ -179,6 +180,11 @@ a{
 }
 .navbar .nav-item i {
 	font-size: 18px;
+    color: #524f4b;;
+}
+.nav-link{
+    color: #524f4b !important;
+    font-size: 14px;
 }
 .navbar .nav-item span {
 	position: relative;
@@ -287,6 +293,12 @@ a{
 	.input-group {
 		width: 100%;
 	}
+.navbar-brand{
+    color: #474139 !important ;
+}
+.active{
+    text-decoration: underline !important; 
+}
 
     
 

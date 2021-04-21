@@ -20,22 +20,26 @@
 
 <!--start navbar-->
   
-<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark pt-0 pb-0">
 <div class="container">
-	<a href="#" class="navbar-brand"><i class="fa fa-cube"></i>Brand<b>Name</b></a>  		
+	<a href="{% url 'home' %}" class="navbar-brand ml-md-5"><i class="fa fa-cube"></i>Brand<b>Ayan</b></a>  		
 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">		
 		
-		<div class="navbar-nav ml-auto">
-			<a href="#" class="nav-item nav-link active"><i class="fa fa-home"></i><span>Home</span></a>
-			<a href="#" class="nav-item nav-link"><i class="fa fa-gears"></i><span>Skill</span></a>
-			<a href="#" class="nav-item nav-link"><i class="fa fa-users"></i><span>Education</span></a>
-			<a href="#" class="nav-item nav-link"><i class="fa fa-briefcase"></i><span>Certificate</span></a>
-			<a href="#" class="nav-item nav-link"><i class="fa fa-envelope"></i><span>Achievement</span></a>		
-			<a href="#" class="nav-item nav-link"><i class="fa fa-bell"></i><span>Contact</span></a>
+		<div class="navbar-nav ml-auto mr-md-5">
+    {% url 'home' as home%}
+			<a href="{% url 'home' %}" class="nav-item nav-link {% if request.path == home %}active{% endif %}"><i class="fa fa-home"></i><span>Home</span></a>
+		 {% url 'skill' as skill%}
+    	<a href="{% url 'skill' %}" class="nav-item nav-link {% if request.path == skill %}active{% endif %}"><i class="fa fa-gears"></i><span>Skill</span></a>
+		{% url 'education' as education %}
+    	<a href="{% url 'education' %}" class="nav-item nav-link {% if request.path == education %}active{% endif %}"><i class="fa fa-users"></i><span>Education</span></a>
+			{% url 'achievement' as achievement %}
+      <a href="{% url 'achievement' %}" class="nav-item nav-link {% if request.path == achievement %}active{% endif %}"><i class="fa fa-briefcase"></i><span>Achievement</span></a>
+	  {% url 'contact' as contact %}
+			<a href="{% url 'contact' %}" class="nav-item nav-link {% if request.path == contact %}active{% endif %}"><i class="fa fa-info"></i><span>Contact</span></a>
 		</div>
 	</div>
   </div>
@@ -49,6 +53,8 @@
 
 <!--container-->
 <div class="container">
+
+<div class="ml-md-5 mr-md-5">
 
 
 <!--about me-->
@@ -194,7 +200,7 @@ instagram</a></span><br>
   <hr>
 
 
-
+</div>
 
 
 
@@ -206,16 +212,18 @@ instagram</a></span><br>
 
 
 <footer class="jumbotron mb-0 mt-5 bg-dark text-white text-center">
+<div class="container">
+<div class="ml-md-5 mr-md-5">
 <div class="text-center">
-<a href="https://github.com/ayanchyaziz123"><i class="fa fa-github pb-2  text-white mr-2 " aria-hidden="true"> Github</i></a>
-<a href="https://www.youtube.com/channel/UCOdpQOJytA5J-pyxryFpoTA"><i class="fa fa-youtube pb-2 text-white mr-2 " aria-hidden="true"> Youtube</i></a>
-<a href="https://github.com/ayanchyaziz123"><i class="fa fa-code pb-2 text-white mr-2 " aria-hidden="true"> Codecheaf</i></a>
+<a href="https://github.com/ayanchyaziz123"><i class="fa fa-github pb-2  text-dark mr-2 " aria-hidden="true"> Github</i></a>
+<a href="https://www.youtube.com/channel/UCOdpQOJytA5J-pyxryFpoTA"><i class="fa fa-youtube pb-2 text-dark mr-2 " aria-hidden="true"> Youtube</i></a>
+<a href="https://github.com/ayanchyaziz123"><i class="fa fa-code pb-2 text-dark mr-2 " aria-hidden="true"> Codecheaf</i></a>
 </div>
    <div class="text-center " style="background-color: rgba(0, 0, 0, 0.2);">
     Azizur Rahman Ayan
   </div>
-  
-  
+  </div>
+  </div>
 </footer>
 
 

@@ -5,11 +5,11 @@
 {% block content %}
 
 <div class="col-sm-9 mt-2">
-<h4 class="text-center text-style mb-3">Contact</h4>
+
     <hr>
    <div class="card shadow rounded p-3 ">
 
-
+<h4 class="text-center text-style mb-3">Contact</h4>
 <form class="ml-4 mr-2" name="myForm" action="{% url 'contact' %}" method="POST" onsubmit="return validateForm()">
 {% csrf_token %}
   <div class="form-group">
