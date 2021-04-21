@@ -1,0 +1,61 @@
+<nav class="navbar sticky-top navbar-expand-lg  navbar-dark bg-dark pb-0 pt-0 shadow" >
+  <div class="container">
+  {% url 'home' as home%}
+  <a class="navbar-brand {% if request.path == home %}active{% endif %} ml-md-5" href="{% url 'home' %}"><i class="fa fa-home" aria-hidden="true"></i> Home </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    Menu <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-nav mr-auto">
+    
+     {% url 'skill' as skill%}
+      <li class="nav-item {% if request.path == skill %}active{% endif %}" >
+
+        <a class="nav-link" href="{% url 'skill' %}"><i class="fa fa-id-card-o" aria-hidden="true"></i> Skill</a>
+      </li>
+
+
+    {% url 'education' as education %}
+      <li class="nav-item {% if request.path == education %}active{% endif %}">
+        <a class="nav-link" href="{{ education }}"><i class="fa fa-university" aria-hidden="true"></i> Education <span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+         <li class="nav-item dropdown">
+   
+              
+            <!-- Dropdown button -->
+
+            <a href="javascript:void(0);"  role="button"
+                    class="nav-link dropdown-toggle mll" 
+                    data-toggle="dropdown"><i class="fa fa-arrows" aria-hidden="true"></i> More  <i onclick="myFunction(this)"
+                       class="fa fa-plus-circle fas"></i></a> 
+              
+            <!-- Dropdown options -->
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item text-white" href="{% url 'testimonial' %}">Testimonial</a>
+          <a class="dropdown-item text-white" href="{% url 'exprience' %}">Exprience</a>
+          {% url 'certificate' as certificate %}
+          <a class="dropdown-item text-white {% if request.path == certificate %}active{% endif %}" href="{{ certificate }}">certificate</a>
+          <a class="dropdown-item text-white" href="{% url 'achievement' %}">Achievement</a>
+           <a class="dropdown-item text-white" href="{% url 'research_paper' %}">Research Paper</a>
+          <div class="dropdown-divider"></div>
+
+        </div> 
+
+        </li>
+      
+      {% url 'contact' as contact%}
+       <li class="nav-item {% if request.path == contact %}active ul{% endif %}">
+        <a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-info" aria-hidden="true"></i> Contact</a>
+        
+      </li>
+      
+    </ul>
+  
+    
+  </div>
+</div>
+
+</nav>

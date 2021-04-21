@@ -19,72 +19,37 @@
 <body style="background-color: #f5f5f5;">
 
 <!--start navbar-->
-  <nav class="navbar sticky-top navbar-expand-lg  navbar-dark bg-dark pb-0 pt-0 shadow" >
-  <div class="container">
-  {% url 'home' as home%}
-  <a class="navbar-brand {% if request.path == home %}active{% endif %} ml-md-5" href="{% url 'home' %}"><i class="fa fa-home" aria-hidden="true"></i> Home </a>
   
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    Menu <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav navbar-nav mr-auto">
-    
-     {% url 'skill' as skill%}
-      <li class="nav-item {% if request.path == skill %}active{% endif %}" >
-
-        <a class="nav-link" href="{% url 'skill' %}"><i class="fa fa-id-card-o" aria-hidden="true"></i> Skill</a>
-      </li>
-
-
-    {% url 'education' as education %}
-      <li class="nav-item {% if request.path == education %}active{% endif %}">
-        <a class="nav-link" href="{{ education }}"><i class="fa fa-university" aria-hidden="true"></i> Education <span class="sr-only">(current)</span></a>
-      </li>
-      
-      
-         <li class="nav-item dropdown">
-   
-              
-            <!-- Dropdown button -->
-
-            <a href="javascript:void(0);"  role="button"
-                    class="nav-link dropdown-toggle mll" 
-                    data-toggle="dropdown"><i class="fa fa-arrows" aria-hidden="true"></i> More  <i onclick="myFunction(this)"
-                       class="fa fa-plus-circle fas"></i></a> 
-              
-            <!-- Dropdown options -->
-            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-white" href="{% url 'testimonial' %}">Testimonial</a>
-          <a class="dropdown-item text-white" href="{% url 'exprience' %}">Exprience</a>
-          {% url 'certificate' as certificate %}
-          <a class="dropdown-item text-white {% if request.path == certificate %}active{% endif %}" href="{{ certificate }}">certificate</a>
-          <a class="dropdown-item text-white" href="{% url 'achievement' %}">Achievement</a>
-           <a class="dropdown-item text-white" href="{% url 'research_paper' %}">Research Paper</a>
-          <div class="dropdown-divider"></div>
-
-        </div> 
-
-        </li>
-      
-      {% url 'contact' as contact%}
-       <li class="nav-item {% if request.path == contact %}active ul{% endif %}">
-        <a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-info" aria-hidden="true"></i> Contact</a>
-        
-      </li>
-    </ul>
-  
-    
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+<div class="container">
+	<a href="#" class="navbar-brand"><i class="fa fa-cube"></i>Brand<b>Name</b></a>  		
+	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">		
+		
+		<div class="navbar-nav ml-auto">
+			<a href="#" class="nav-item nav-link active"><i class="fa fa-home"></i><span>Home</span></a>
+			<a href="#" class="nav-item nav-link"><i class="fa fa-gears"></i><span>Skill</span></a>
+			<a href="#" class="nav-item nav-link"><i class="fa fa-users"></i><span>Education</span></a>
+			<a href="#" class="nav-item nav-link"><i class="fa fa-briefcase"></i><span>Certificate</span></a>
+			<a href="#" class="nav-item nav-link"><i class="fa fa-envelope"></i><span>Achievement</span></a>		
+			<a href="#" class="nav-item nav-link"><i class="fa fa-bell"></i><span>Contact</span></a>
+		</div>
+	</div>
   </div>
-</div>
-
 </nav>
+
 <!--end navbar-->
+
+
+
 
 
 <!--container-->
 <div class="container">
-<div class="ml-md-5 mr-md-5">
+
 
 <!--about me-->
 
@@ -109,20 +74,22 @@
 
 
  <div class="col-sm-3 text-center mb-5 mt-2">
-    
-    <h4 class="text-center text-style mb-3">About Me</h4>
+   
     <hr>
     <div class="card shadow rounded  text-center">
-    <img src="{% static 'images/aya.jpeg' %}" class="rounded-circle m-hw border border-secondary shadow card-img-top mx-auto d-block mt-1" alt="Cinque Terre"> <hr>
+     <h4 class="text-center text-style">About</h4>
+  <hr>
     <div class="ml-md-4">
       <span class="text-style-two"> <i class="fa fa-user" aria-hidden="true"></i>  Azizur Rahman (Ayan)</span></br>
       <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> B.Sc. Engineering in CSE <br>
 <span class="text-style-two"><a href="mailto:webmaster@example.com" class="text-dark"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
 <span class="text-style-two"><a href="tel:123-456-7890" class="text-dark"><i class="fa fa-phone-square" aria-hidden="true"></i> 01759773446</a></span><br>
-<a href="/static/MyCV.pdf" class="btn-cv btn btn-secondary  mt-2 mb-2"  download>Download CV</a>
+
 </div>
 </div>
 <hr>
+
+<div class="card shadow rounded">
 <h4 class="text-center text-style">Find Me</h4>
 <hr>
 <marquee behavior="scroll" direction="down" value="Slower" class="text-center" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
@@ -146,42 +113,36 @@ instagram</a></span><br>
 
 
 </div>
-
-
-<div style="margin-top:70px;">
 </div>
 
- <h3 class="text-center mt-5 text-style mt-5"> Recent Project</h3>
- <p class="text-center">recent projects were made by me<p/>
-  <div class="row mt-5 ml-1 mr-1">
-    
+
+
+
+  <div class="row mt-3 ">
+
+   
     {% for project in project %}
 
-    <div class="col-sm-3 mt-2" style="border-radius: 25px;">
-    <a href="#">
+    <div class="col-sm-9 mt-2">
+<div class="card text-white  shadow  rounded">
 
-<div class="card text-white  mb-3  shadow  rounded">
-
-
-
- <div class="inner">
-
- <img src={{project.projectImage.url}} alt="no img" class="card-img-top img-bor" style="max-height:100px;">
-
- <a href="{% url 'fullProject' project.id %}">
-
-   </div>
-  <div class="card-body">
-  <div class="card-title"> <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two tt">{{project.projectTitle |truncatechars:15}}</a></br></div>
-    <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two">{{project.projectDescriptions |truncatechars:50}}</a>
+<div class="d-flex flex-row bd-highlight mb-3 p-2">
+  <div class=" bd-highlight"> <img src={{project.projectImage.url}} alt="no img" class="card-img-top img-bor" style="max-height:200px; max-width:200px;">
   </div>
+  <div class=" bd-highlight"><a href="{% url 'fullProject' project.id %}">
+   <div class="card-body">
+  <div class="card-title"> <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two tt">{{project.projectTitle |truncatechars:50}}</a></br>
+  </div>
+    <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two">{{project.projectDescriptions |truncatechars:200}}</a>
+  </div>
+  </a>
 
 </div>
-</a>
 
+</div>
+</div>
+</div>
 
-
-    </div>
     {% endfor %}
 
 
@@ -237,7 +198,6 @@ instagram</a></span><br>
 
 
 
-</div>
 
 </div>
 <!--end container-->
