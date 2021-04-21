@@ -35,25 +35,37 @@ class Contact(models.Model):
     reply = models.BooleanField(default=False)
 
 class MySelf(models.Model):
+    title = models.CharField(max_length=200, blank=True, null=True)
     body = RichTextUploadingField(blank=True, null=True)
 
 class Skill(models.Model):
+    title = models.CharField(max_length=200, blank=True, null=True)
     body = RichTextUploadingField(blank=True, null=True)
 
 class Education(models.Model):
+    title = models.CharField(max_length=200, blank=True, null=True)
     body = RichTextUploadingField(blank=True, null=True)   
 
 class Testimonial(models.Model):
+    title = models.CharField(max_length=200, blank=True, null=True)
     body = RichTextUploadingField(blank=True, null=True)
 
 class ResearchPaper(models.Model):
+    title = models.CharField(max_length=200, blank=True, null=True)
     body = RichTextUploadingField(blank=True, null=True)
 
 class Exprience(models.Model):
+    title = models.CharField(max_length=200, blank=True, null=True)
     body = RichTextUploadingField(blank=True, null=True) 
 
 class Achievement(models.Model):
+    title = models.CharField(max_length=200, blank=True, null=True)
     body = RichTextUploadingField(blank=True, null=True)  
 
 class Certificate(models.Model):
+    title = models.CharField(max_length=200, blank=True, null=True)
     body = RichTextUploadingField(blank=True, null=True)  
+
+class CV(models.Model):
+    title = models.CharField(max_length=200, blank=True, null=True)
+    cv = models.FileField()    
