@@ -22,9 +22,9 @@
   
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark pt-0 pb-0">
 <div class="container">
-	<a href="{% url 'home' %}" class="navbar-brand ml-md-5"><i class="fa fa-cube"></i>Brand<b>Ayan</b></a>  		
-	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-		<span class="navbar-toggler-icon"></span>
+	<a href="{% url 'home' %}" class="navbar-brand ml-md-5"><i class="fa fa-cube"></i><b>ARCA</b></a>  		
+	<button type="button" class="navbar-toggler cl" data-toggle="collapse" data-target="#navbarCollapse">
+		Menu <span class="navbar-toggler-icon bg-dark"></span>
 	</button>
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">		
@@ -82,12 +82,14 @@
  <div class="col-sm-3 text-center mb-5 mt-2">
    
     <hr>
-    <div class="card shadow rounded  text-center">
-     <h4 class="text-center text-style">About</h4>
-  <hr>
+    <div class="card shadow rounded  text-center pb-2 pt-2">
+     <h4 class="text-center hc pt-1">About Me</h4>
+
     <div class="ml-md-4">
       <span class="text-style-two"> <i class="fa fa-user" aria-hidden="true"></i>  Azizur Rahman (Ayan)</span></br>
       <span class="text-style-two "><i class="fa fa-graduation-cap" aria-hidden="true"></i> B.Sc. Engineering in CSE <br>
+      <span class="text-style-two "><i class="fa fa-home" aria-hidden="true"></i> Live in Sylhet <br>
+      <span class="text-style-two "><i class="fa fa-location-arrow" aria-hidden="true"></i> From Sylhet <br>
 <span class="text-style-two"><a href="mailto:webmaster@example.com" class="text-dark"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
 <span class="text-style-two"><a href="tel:123-456-7890" class="text-dark"><i class="fa fa-phone-square" aria-hidden="true"></i> 01759773446</a></span><br>
 
@@ -96,7 +98,7 @@
 <hr>
 
 <div class="card shadow rounded">
-<h4 class="text-center text-style">Find Me</h4>
+<h4 class="text-center hc pt-1">Find Me</h4>
 <hr>
 <marquee behavior="scroll" direction="down" value="Slower" class="text-center" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
 
@@ -124,22 +126,40 @@ instagram</a></span><br>
 
 
 
-  <div class="row mt-3 ">
 
-   
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+   <div class="col-sm-8 text-center">
+   <h5 class="mt-5 hc">Recent Projects</h5>
+
+   </div>
+</div>
+
+  <div class="row mt-1 ">
+ <div class="col-sm-9 mt-2">
+    <div class="card shadow rounded">
     {% for project in project %}
-
-    <div class="col-sm-9 mt-2">
-<div class="card text-white  shadow  rounded">
+   
+   
+<div class=" text-white">
 
 <div class="d-flex flex-row bd-highlight mb-3 p-2">
-  <div class=" bd-highlight"> <img src={{project.projectImage.url}} alt="no img" class="card-img-top img-bor" style="max-height:200px; max-width:200px;">
+  <div class=" bd-highlight"> <img src={{project.projectImage.url}} alt="no img" class="card-img-top img-bor img-fluid" style="max-height:100px; max-width:80px;">
   </div>
   <div class=" bd-highlight"><a href="{% url 'fullProject' project.id %}">
    <div class="card-body">
   <div class="card-title"> <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two tt">{{project.projectTitle |truncatechars:50}}</a></br>
   </div>
-    <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two">{{project.projectDescriptions |truncatechars:200}}</a>
+    <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two">{{project.projectDescriptions|safe |truncatechars:200}}</a>
   </div>
   </a>
 
@@ -147,11 +167,13 @@ instagram</a></span><br>
 
 </div>
 </div>
-</div>
+<hr>
+
+
 
     {% endfor %}
-
-
+</div>
+</div>
     
   </div>
 
@@ -210,22 +232,22 @@ instagram</a></span><br>
 
 <!--footer-->
 
-
-<footer class="jumbotron mb-0 mt-5 bg-dark text-white text-center">
 <div class="container">
 <div class="ml-md-5 mr-md-5">
+<footer class="jumbotron mb-0 mt-5 bg-dark text-white text-center">
+
 <div class="text-center">
-<a href="https://github.com/ayanchyaziz123"><i class="fa fa-github pb-2  text-dark mr-2 " aria-hidden="true"> Github</i></a>
-<a href="https://www.youtube.com/channel/UCOdpQOJytA5J-pyxryFpoTA"><i class="fa fa-youtube pb-2 text-dark mr-2 " aria-hidden="true"> Youtube</i></a>
-<a href="https://github.com/ayanchyaziz123"><i class="fa fa-code pb-2 text-dark mr-2 " aria-hidden="true"> Codecheaf</i></a>
+<a href="https://github.com/ayanchyaziz123"><i class="fa fa-github pb-2  text-white mr-2 " aria-hidden="true"> Github</i></a>
+<a href="https://www.youtube.com/channel/UCOdpQOJytA5J-pyxryFpoTA"><i class="fa fa-youtube pb-2 text-white mr-2 " aria-hidden="true"> Youtube</i></a>
+<a href="https://github.com/ayanchyaziz123"><i class="fa fa-code pb-2 text-white mr-2 " aria-hidden="true"> Codecheaf</i></a>
 </div>
    <div class="text-center " style="background-color: rgba(0, 0, 0, 0.2);">
     Azizur Rahman Ayan
   </div>
-  </div>
-  </div>
+ 
 </footer>
-
+ </div>
+  </div>
 
  <script>  
           

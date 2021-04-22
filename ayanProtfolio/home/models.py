@@ -13,7 +13,7 @@ class Project(models.Model):
     projectPrority = models.IntegerField(blank=True, null=True)
     postCreator = models.CharField(max_length=200)
     projectTitle = models.CharField(max_length=200)
-    projectDescriptions = models.TextField()
+    projectDescriptions = models.TextField(blank=True, null=True)
     projectBody = RichTextUploadingField(blank=True, null=True)
     projectVideoUrl = models.TextField(blank=True)
     projectViews = models.IntegerField(default=0)

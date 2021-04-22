@@ -4,6 +4,8 @@
 {% block content %}
 
 <div class="col-sm-9 mt-2">
+    
+
 
  
     <hr>
@@ -11,12 +13,12 @@
 
     <img src="{% static 'images/ayan6.jpg' %}" style="max-height:340px">
     <div>
-    <img src="{% static 'images/aya.jpeg' %}" style="max-height:100px; margin-top:-100px" class="ml-5 img-thumbnail">
+    <img src="{% static 'images/aya.jpeg' %}" style="max-height:100px; margin-top:-100px;border: 2px solid #46344E" class="ml-5 img-thumbnail">
     <div class="ml-5">
     <h5>Azizur Rahman (Ayan)</h5>
     <h5>MERN Stack Web Developer and Competitive Programmer. Student at metropolitan university, Sylhet</h5>
-    <a href="/static/MyCV.pdf" class="btn-cv btn btn-secondary  mt-2 mb-2"  download>Download CV</a>
-      
+    <a href="/static/MyCV.pdf" class="btn-cv btn btn-secondary  mt-2 mb-2"  download>Download CV <i class="fa fa-sort-desc ml-1"  aria-hidden="true"></i></a>
+     <a href="https://programmingworldd.herokuapp.com/" target="_blank" class="btn-cv btn border border-secondary  mt-2 mb-2 ml-2">Bloging Website <i class="fa fa-sort-desc ml-1"  aria-hidden="true"></i></a> 
  </div>
  </div>
 
@@ -26,7 +28,7 @@
     
      <div class="card shadow rounded mt-3">
 
-     <h5  class="mt-2 mb-2 text-center">My self</h5>
+     <h5  class="mt-2 mb-2 text-center hc pt-1">My self</h5>
 
     
     {% for myself in myself %}
@@ -43,6 +45,91 @@
 
 
     </div>
+
+   <!--testimonial start-->
+
+
+   <div class="card shadow rounded mt-5">
+     <div class="card-body">
+ <h5 class="p-2 hc text-center">Recommendations</h5>
+<div class="d-flex justify-content-end">
+
+ 
+ 
+  <div class="p-2 bd-highlight"> <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
+    Recomment Me
+  </button>
+  
+   <!-- The Modal -->
+  <div class="modal fade rounded" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="p-2 bd-highlight"><p>Receive(20)</p></div>
+</div>
+
+    <div class="d-flex flex-row bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex item 1</div>
+  <div class="p-2 bd-highlight">Flex item 2</div>
+
+</div>
+</div>
+
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--testimonial end-->
+
+
 
 
     </div>

@@ -3,7 +3,10 @@ body{
     font-size: 18px;;
 }
 .bg-dark{
-    background-color: #fff !important;
+    background-color: #46344E  !important;
+}
+.cl{
+    background-color: #46344E  !important;
 }
 .bg-info{
     background-color: #46344E !important;
@@ -180,10 +183,10 @@ a{
 }
 .navbar .nav-item i {
 	font-size: 18px;
-    color: #524f4b;;
+    color: #46344E;
 }
 .nav-link{
-    color: #524f4b !important;
+    color: #46344E !important;
     font-size: 14px;
 }
 .navbar .nav-item span {
@@ -296,9 +299,18 @@ a{
 .navbar-brand{
     color: #474139 !important ;
 }
-.active{
-    text-decoration: underline !important; 
+.nav-link.active{
+    text-decoration: overline !important;
+    color: #474139 !important;
 }
+.navbar-toggler{
+    border-color: #474139 !important;
+    color: #46344E;
+}
+.hc{
+    color: #46344E !important;
+}
+
 
     
 
