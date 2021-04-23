@@ -57,28 +57,53 @@
  
  
   <div class="p-2 bd-highlight"> <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">
-    Recomment Me
+    Recommend Me
   </button>
   
    <!-- The Modal -->
   <div class="modal fade rounded" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
+    <div class="modal-dialog  ">
+      <div class="modal-content  rounded">
       
         <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-header bg-dark text-white">
+          <h4 class="modal-title">Write Azizur Rahman Ayan a recommendation</h4>
+          
+          <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+          
         </div>
+        
         
         <!-- Modal body -->
         <div class="modal-body">
-          Modal body..
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </p class="m-2">The recommendation will appear on Azizur Rahman Ayan’ profile.</p>
+          <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Name</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter name">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputPassword1">Occupation</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter occupation">
+  </div>
+  <form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">photo</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+</form>
+   <div class="form-group">
+    <label for="exampleInputPassword1">Recommendation</label>
+    <textarea class="form-control" id="exampleInputPassword1" placeholder="Recommendation ">
+    </textarea>
+  </div>
+  <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
         </div>
         
       </div>
@@ -101,11 +126,36 @@
 </div>
 
     <div class="d-flex flex-row bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
+  <div class="p-1 bd-highlight mr-5">
+  
+     <img src="{% static 'images/aya.jpeg' %}" style="max-height:100px;border: 2px solid #46344E" class="img-thumbnail">
+    <br> <span class="mt-3">Azizur Rahman </span><br>
+     <span>aaziz9642@gmail.com </span>
+  </div>
+  <div class="p-2 bd-highlight">I rarely come across real talents who stand out like Azizur Rahman.Currently, I'm a student of metropolitan university with Azizur Rahman as a class mate or as a student he is supperior. I had the pleasure of working with him 
+  for two projects. As a team member or a leader Azizur earns my highest recommendation.</div>
 
 </div>
+<hr>
+
+<div class="d-flex flex-row bd-highlight mb-3">
+  <div class="p-1 bd-highlight mr-5">
+  
+     <img src="{% static 'images/aya.jpeg' %}" style="max-height:100px;border: 2px solid #46344E" class="img-thumbnail">
+    <br> <span class="mt-3">Azizur Rahman </span><br>
+     <span>aaziz9642@gmail.com </span>
+  </div>
+  <div class="p-2 bd-highlight">I rarely come across real talents who stand out like Azizur Rahman.Currently, I'm a student of metropolitan university with Azizur Rahman as a class mate or as a student he is supperior. I had the pleasure of working with him 
+  for two projects. As a team member or a leader Azizur earns my highest recommendation.</div>
+
 </div>
+
+
+
+</div>
+
+
+
 
 
    </div>
