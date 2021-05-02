@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields.files import ImageFieldFile
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
@@ -69,3 +70,11 @@ class Certificate(models.Model):
 class CV(models.Model):
     title = models.CharField(max_length=200, blank=True, null=True)
     cv = models.FileField()    
+
+class Recommendation(models.Model):
+    email = models.EmailField(max_length=200)
+    name = models.CharField(max_length=200)
+    Occupation = models.CharField(max_length=200)
+    photo = models.ImageField(blank=True, null=True)
+    recommendation = models.CharField(max_length=1000)
+

@@ -21,8 +21,8 @@
 <!--start navbar-->
   
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark pt-0 pb-0">
-<div class="container">
-	<a href="{% url 'home' %}" class="navbar-brand ml-md-5"><i class="fa fa-cube"></i><b>ARCA</b></a>  		
+<div class="container bg-dark">
+	<a href="{% url 'home' %}" class="navbar-brand ml-md-5 ml-3"><i class="fa fa-cube"></i><b>ARCA</b></a>  		
 	<button type="button" class="navbar-toggler cl" data-toggle="collapse" data-target="#navbarCollapse">
 		Menu <span class="navbar-toggler-icon bg-dark"></span>
 	</button>
@@ -151,8 +151,8 @@ instagram</a></span><br>
    
 <div class=" text-white">
 
-<div class="d-flex flex-row bd-highlight mb-3 p-2">
-  <div class=" bd-highlight"> <img src={{project.projectImage.url}} alt="no img" class="card-img-top img-bor img-fluid" style="max-height:100px; max-width:80px;">
+<div class="d-flex flex-row bd-highlight mb-1 p-2">
+  <div class=" bd-highlight"> <img src={{project.projectImage.url}} alt="no img" class="img-res img-fluid mt-5" style="max-height:100px; max-width:80px;">
   </div>
   <div class=" bd-highlight"><a href="{% url 'fullProject' project.id %}">
    <div class="card-body">

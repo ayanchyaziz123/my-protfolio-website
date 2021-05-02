@@ -14,9 +14,9 @@
     <img src="{% static 'images/ayan6.jpg' %}" style="max-height:340px">
     <div>
     <img src="{% static 'images/aya.jpeg' %}" style="max-height:100px; margin-top:-100px;border: 2px solid #46344E" class="ml-5 img-thumbnail">
-    <div class="ml-5">
+    <div class="ml-5 ff">
     <h5>Azizur Rahman (Ayan)</h5>
-    <h5>MERN Stack Web Developer and Competitive Programmer. Student at metropolitan university, Sylhet</h5>
+    <h5>Competitive Programmer and Student at Metropolitan University,Sylhet</h5>
     <a href="/static/MyCV.pdf" class="btn-cv btn btn-secondary  mt-2 mb-2"  download>Download CV <i class="fa fa-sort-desc ml-1"  aria-hidden="true"></i></a>
      <a href="https://programmingworldd.herokuapp.com/" target="_blank" class="btn-cv btn border border-secondary  mt-2 mb-2 ml-2">Bloging Website <i class="fa fa-sort-desc ml-1"  aria-hidden="true"></i></a> 
  </div>
@@ -80,16 +80,21 @@
           <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email required">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1"  class="text-style-two ">Name</label>
+    <input type="text" class="form-control " id="name" name="name"  placeholder="Enter name" required>
+    <p id="incorrect_name"></p>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Name</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter name">
   </div>
    <div class="form-group">
-    <label for="exampleInputPassword1">Occupation</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter occupation">
+    <label for="exampleInputPassword1">Your Bio</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your bio">
   </div>
   <form>
   <div class="form-group">
@@ -122,33 +127,41 @@
   
   
   
-  <div class="p-2 bd-highlight"><p>Receive(20)</p></div>
+  <div class="p-2 bd-highlight"><p>Receive({{total_recom}})</p></div>
 </div>
-
-    <div class="d-flex flex-row bd-highlight mb-3">
-  <div class="p-1 bd-highlight mr-5">
+    
+    {% for recom in recom %}
+    
+    <div class="d-flex flex-row bd-highlight mb-3 ff">
+  <div class="p-1 bd-highlight mr-1">
   
-     <img src="{% static 'images/aya.jpeg' %}" style="max-height:100px;border: 2px solid #46344E" class="img-thumbnail">
-    <br> <span class="mt-3">Azizur Rahman </span><br>
-     <span>aaziz9642@gmail.com </span>
-  </div>
-  <div class="p-2 bd-highlight">I rarely come across real talents who stand out like Azizur Rahman.Currently, I'm a student of metropolitan university with Azizur Rahman as a class mate or as a student he is supperior. I had the pleasure of working with him 
-  for two projects. As a team member or a leader Azizur earns my highest recommendation.</div>
+     <img src="{{recom.photo.url}}" style="max-height:150px; max-width:150px;border: 2px solid #46344E" class="img-ress img-thumbnail img-fluid mb-2">
+       <span class="mt-3"><b>{{recom.name}}</b>, </span>
 
-</div>
+     <span>{{recom.Occupation}}</span>
+  </div>
+  
+  
+ 
+  
+  
+
+  <div class="p-2 bd-highlight">
+  
+  <p class="mt-5">{{recom.recommendation}}</p>
+  <div>
+
+  
+  </div>
+  
+  
+  </div>
+   </div>
+
 <hr>
 
-<div class="d-flex flex-row bd-highlight mb-3">
-  <div class="p-1 bd-highlight mr-5">
-  
-     <img src="{% static 'images/aya.jpeg' %}" style="max-height:100px;border: 2px solid #46344E" class="img-thumbnail">
-    <br> <span class="mt-3">Azizur Rahman </span><br>
-     <span>aaziz9642@gmail.com </span>
-  </div>
-  <div class="p-2 bd-highlight">I rarely come across real talents who stand out like Azizur Rahman.Currently, I'm a student of metropolitan university with Azizur Rahman as a class mate or as a student he is supperior. I had the pleasure of working with him 
-  for two projects. As a team member or a leader Azizur earns my highest recommendation.</div>
+{% endfor %}
 
-</div>
 
 
 

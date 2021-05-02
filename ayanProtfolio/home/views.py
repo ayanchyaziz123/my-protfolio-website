@@ -13,9 +13,13 @@ def home(request):
     page = request.GET.get('page')
     project = paginator.get_page(page)
     myself = MySelf.objects.all()
+    recom = Recommendation.objects.all()
+    total_recom = recom.count()
     context = {
         'project':project,
         'myself': myself,
+        'recom':recom,
+        'total_recom': total_recom,
     }
     return render(request, 'home.html', context)
 def fullProject(request, slug):

@@ -1,5 +1,5 @@
 body{
-    font-family:Helvetica Neue; 
+    font-family:Helvetica Neue !important; 
     font-size: 18px;;
 }
 .bg-dark{
@@ -116,7 +116,7 @@ a{
 }
 .example .pagination>li>a,
 .example .pagination>li>span {
-  border: 1px solid #5e31b88 !important;
+  border: 1px solid #5e31b8 !important;
 }
 .pagination>li.active>a {
   background: #46344E !important;
@@ -127,7 +127,7 @@ a{
 }
 
 .navbar {
-	color: black;
+	columns: #fff !important;
     background: #fff !important;
 	padding: 5px 16px;
 	border-radius: 0;
@@ -143,8 +143,7 @@ a{
 .navbar .navbar-brand {
 	padding-left: 0;
 	padding-right: 50px;
-	font-size: 20px;
-    color: #46344E !important ;		
+	font-size: 20px;	
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
 	color: #fff;
@@ -183,7 +182,6 @@ a{
 }
 .navbar .nav-item i {
 	font-size: 18px;
-    color: #46344E;
 }
 .nav-link{
     color: #46344E !important;
@@ -194,15 +192,16 @@ a{
 	top: 3px;
 }
 .navbar .navbar-nav > a {
-	color: #efe5ff;
+	color: #efe5ff !important;
 	padding: 8px 15px;
 	font-size: 14px;		
 }
 .navbar .navbar-nav > a:hover, .navbar .navbar-nav > a:focus {
-	color: #fff;
+	color: #fff !important;
 	text-shadow: 0 0 4px rgba(255,255,255,0.3);
 }
 .navbar .navbar-nav > a > i {
+	color: #fff !important;
 	display: block;
 	text-align: center;
 }
@@ -217,7 +216,7 @@ a{
 	margin-top: -2px;
 }
 .navbar .nav-item.open > a, .navbar .nav-item.open > a:hover, .navbar .nav-item.open > a:focus {
-	color: #fff;
+	color: #fff !important;
 	background: none !important;
 }
 .navbar .dropdown-menu {
@@ -275,11 +274,13 @@ a{
 		min-width: 30px;
 		position: relative;
 		top: 4px;
+		color: #fff !important;
 	}
 	.navbar .navbar-collapse {
 		border: none;
 		box-shadow: none;
 		padding: 0;
+		color: #fff !important;
 	}
 	.navbar .navbar-form {
 		border: none;			
@@ -289,6 +290,7 @@ a{
 	}
 	.navbar .navbar-nav {
 		margin: 8px 0;
+		color: #fff !important;
 	}
 	.navbar .navbar-toggle {
 		margin-right: 0;
@@ -297,7 +299,7 @@ a{
 		width: 100%;
 	}
 .navbar-brand{
-    color: #474139 !important ;
+    color: #fff  !important ;
 }
 .nav-link.active{
     text-decoration: overline !important;
@@ -305,11 +307,27 @@ a{
 }
 .navbar-toggler{
     border-color: #474139 !important;
-    color: #46344E;
+    color: #fff !important;
 }
 .hc{
     color: #46344E !important;
 }
+.img-res {
+    width: auto;
+    height: 100px;
+	object-fit: cover;
+}
+.img-ress {
+    width: auto;
+    height: 100px;
+	object-fit: cover;
+	
+}
+.ff{
+	font-family:Helvetica Neue !important; 
+
+}
+	
 
 
     
