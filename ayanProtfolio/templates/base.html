@@ -17,7 +17,7 @@
     />
     <style>
 .vl {
-  border-right: 3px solid #363945;
+  border-right: 2px solid #363945;
   
 }
 </style>
@@ -119,11 +119,63 @@
 <h5>#Education</h5>
 <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
  meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
-</div>
+
+<hr>
+
+<h5>#Education</h5>
+<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
+ meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+
+
 
 </div>
 
 
+</div>
+
+
+<div class="row mt-5 bg-dark">
+<div class="col-sm-3">
+</div>
+<div class="col-sm-6  text-white p-3">
+<h5>#Contact</h5>
+<form class="ml-4 mr-2" name="myForm" action="{% url 'contact' %}" method="POST" onsubmit="return validateForm()">
+{% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputEmail1"  class="text-style-two ">Name</label>
+    <input type="text" class="form-control " id="name" name="name"  placeholder="Enter name" required>
+    <p id="incorrect_name"></p>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"  class="text-style-two ">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+    <p id="incorrect_email"></p>
+  </div>
+  <form class="ml-md-5">
+  <div class="form-group">
+    <label for="exampleInputEmail1"  class="text-style-two ">Subject</label>
+    <input type="text" class="form-control" id="subject" name="subject"  placeholder="Enter subject" required>
+     <p id="incorrect_subject"></p>
+  </div>
+  <div class="form-group">
+    <label for="emessage"  class="text-style-two " >Message</label>
+    <textarea class="form-control" id="message" name="message" placeholder="Enter message" required></textarea>
+    <p id="incorrect_message"></p>
+  </div>
+  
+
+  <button type="submit" class="btn-cv btn btn-secondary">Submit</button>
+</form>
+
+
+
+
+</div>
+
+<div class="col-sm-3">
+
+
+</div>
 
 
 
