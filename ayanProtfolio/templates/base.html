@@ -15,46 +15,126 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <style>
+.vl {
+  border-right: 3px solid #363945;
+  
+}
+</style>
 </head>
 <body style="background-color: #f5f5f5;">
 
-<!--start navbar-->
+<!--start container-->
+<div class="container " style="background:#363945;">
   
-<nav class="navbar navbar-expand-xl navbar-dark bg-dark pt-0 pb-0">
-<div class="container bg-dark">
-	<a href="{% url 'home' %}" class="navbar-brand ml-md-5 ml-3"><i class="fa fa-cube"></i><b>ARCA</b></a>  		
-	<button type="button" class="navbar-toggler cl" data-toggle="collapse" data-target="#navbarCollapse">
-		Menu <span class="navbar-toggler-icon bg-dark"></span>
-	</button>
-	<!-- Collection of nav links, forms, and other content for toggling -->
-	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">		
-		
-		<div class="navbar-nav ml-auto mr-md-5">
-    {% url 'home' as home%}
-			<a href="{% url 'home' %}" class="nav-item nav-link {% if request.path == home %}active{% endif %}"><i class="fa fa-home"></i><span>Home</span></a>
-		 {% url 'skill' as skill%}
-    	<a href="{% url 'skill' %}" class="nav-item nav-link {% if request.path == skill %}active{% endif %}"><i class="fa fa-gears"></i><span>Skill</span></a>
-		{% url 'education' as education %}
-    	<a href="{% url 'education' %}" class="nav-item nav-link {% if request.path == education %}active{% endif %}"><i class="fa fa-users"></i><span>Education</span></a>
-			{% url 'achievement' as achievement %}
-      <a href="{% url 'achievement' %}" class="nav-item nav-link {% if request.path == achievement %}active{% endif %}"><i class="fa fa-briefcase"></i><span>Achievement</span></a>
-	  {% url 'contact' as contact %}
-			<a href="{% url 'contact' %}" class="nav-item nav-link {% if request.path == contact %}active{% endif %}"><i class="fa fa-info"></i><span>Contact</span></a>
-		</div>
-	</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-0 pb-0" style="margin">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Recent Project</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+     
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+    <span class="mr-2"><a href="https://github.com/ayanchyaziz123" target="_blank" class=""><i class="fa fa-github text-white" aria-hidden="true"></i></a></span>
+      <span class="mr-2"><a href="https://www.linkedin.com/in/azizur-rahman-720636165/" target="_blank" class="text-style-two text-white"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></span>
+       <span class=""><a href="https://www.instagram.com/imayanchyaziz/" target="_blank" class="text-style-two"><i class="fa fa-instagram text-white" aria-hidden="true"></i>
+</a></span>
+    </form>
   </div>
 </nav>
+</div>
 
 <!--end navbar-->
 
 
 
+<!--start container-->
+<div class="container mb-2 mt-2 bg-white" >
+<div class="row" style="background:#363945;">
+  <div class="col-sm-4 mt-2 mb-2">
+       <img src="{% static 'images/aya.jpeg' %}" style="max-height:150px; border: 2px solid #46344E" class="ml-5 img-thumbnail">
+  </div>
+  <div class="col-sm-5">
+  <h1 class="display-4 text-white">Azizur Rahman</h1>
+  <p class="lead text-white">Student At Metropolitan University</p>
+  </div>
+  <div class="col-sm-3">
+   <div class="mt-3 text-white">
+      <span class=""><i class="fa fa-home" aria-hidden="true"></i> Live in Sylhet <br>
+      <span class=""><i class="fa fa-location-arrow" aria-hidden="true"></i> From Sylhet <br>
+<span class=""><a href="mailto:webmaster@example.com" class="text-white"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
+<span class=""><a href="tel:123-456-7890" class="text-white"><i class="fa fa-phone-square" aria-hidden="true"></i> 01759773446</a></span><br>
+
+</div>
+  </div>
+</div>
+
+
+<!--end container-->
+
+
+<div class="row ">
+<div class="col-sm-3 p-3 vl">
+<h5>#Profile</h5>
+<p>Disciplined and enthusiastic sales associate, conversant with POS and stock management systems. Eager to join the ABC Store team to boost sales numbers and customer loyalty metrics. Previous retail experience includes a summer job as a restocker and cashier at DEF Store. Commended on multiple occasions
+ by the store management and customers themselves for superb customer service and communication skills.</p>
+</div>
+<div class="col-sm-5 p-3 vl">
+<h5>#Programming Skill</h5>
+ <ul>
+         <li>Python</li>
+         <li>Java Script</li>
+         <li>Java</li>
+         <li>C</li>
+      </ul>
+</div>
+<div class="col-sm-4 p-3">
+<h5>#Social Skill</h5>
+<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
+ meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+</div>
+</div>
+
+<hr>
+
+<div class="row ">
+<div class="col-sm-8 p-3 vl">
+<h5>#Recent Project</h5>
+<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
+ meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+</div>
+<div class="col-sm-4 p-3 ">
+<h5>#Education</h5>
+<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
+ meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+</div>
+
+</div>
+
+
+
+
+
+<!--container end-->
+</div> 
 
 
 <!--container-->
 <div class="container">
 
-<div class="ml-md-5 mr-md-5">
+
 
 
 <!--about me-->
@@ -79,160 +159,13 @@
 
 
 
- <div class="col-sm-3 text-center mb-5 mt-2">
-   
-    <hr>
-    <div class="card shadow rounded  text-center pb-2 pt-2">
-     <h4 class="text-center hc pt-1">About Me</h4>
-
-    <div class="ml-md-4">
-      <span class="text-style-two"> <i class="fa fa-user" aria-hidden="true"></i>  Azizur Rahman (Ayan)</span></br>
-      <span class="text-style-two "><i class="fa fa-home" aria-hidden="true"></i> Live in Sylhet <br>
-      <span class="text-style-two "><i class="fa fa-location-arrow" aria-hidden="true"></i> From Sylhet <br>
-<span class="text-style-two"><a href="mailto:webmaster@example.com" class="text-dark"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
-<span class="text-style-two"><a href="tel:123-456-7890" class="text-dark"><i class="fa fa-phone-square" aria-hidden="true"></i> 01759773446</a></span><br>
-
-</div>
-</div>
-<hr>
-
-<div class="card shadow rounded">
-<h4 class="text-center hc pt-1">Find Me</h4>
-<hr>
-<marquee behavior="scroll" direction="down" value="Slower" class="text-center" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
-
-<span class="text-style-two"><a href="https://github.com/ayanchyaziz123" target="_blank" class="text-style-two"><i class="fa fa-github" aria-hidden="true"></i>
- github</a></span><br>
- <span class="text-style-two"><a href="https://www.linkedin.com/in/azizur-rahman-720636165/" target="_blank" class="text-style-two"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
- linkedin</a></span><br>
- <span class="text-style-two"><a href="https://www.codechef.com/users/ayan_mu44thc" target="_blank" class="text-style-two"><i class="fa fa-code" aria-hidden="true"></i>
-codecheaf</a></span><br>
- <span class="text-style-two"><a href="https://www.youtube.com/channel/UCOdpQOJytA5J-pyxryFpoTA/playlists" target="_blank" class="text-style-two"><i class="fa fa-youtube" aria-hidden="true"></i>
-youtube</a></span><br>
- <span class="text-style-two"><a href="https://www.instagram.com/imayanchyaziz/" target="_blank" class="text-style-two"><i class="fa fa-instagram" aria-hidden="true"></i>
-instagram</a></span><br>
-
-</marquee>
- <hr>
-    </div>
-
-
-
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="row">
-   <div class="col-sm-8 text-center">
-   <h5 class="mt-5 hc">Recent Projects</h5>
-
-   </div>
-</div>
-
-  <div class="row mt-1 ">
- <div class="col-sm-9 mt-2">
-    <div class="card shadow rounded">
-    {% for project in project %}
-   
-   
-<div class=" text-white">
-
-<div class="d-flex flex-row bd-highlight mb-1 p-2">
-  <div class=" bd-highlight"> <img src={{project.projectImage.url}} alt="no img" class="img-res img-fluid mt-5" style="max-height:100px; max-width:80px;">
-  </div>
-  <div class=" bd-highlight"><a href="{% url 'fullProject' project.id %}">
-   <div class="card-body">
-  <div class="card-title"> <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two tt">{{project.projectTitle |truncatechars:50}}</a></br>
-  </div>
-    <a href="{% url 'fullProject' project.id %}" class="text-dark text-style-two">{{project.projectDescriptions|safe |truncatechars:200}}</a>
-  </div>
-  </a>
-
-</div>
-
-</div>
-</div>
-<hr>
-
-
-
-    {% endfor %}
-</div>
-</div>
-    
-  </div>
-
-  <!--pagination-->
-<div class="mt-4 ml-3">
- <nav aria-label="Page navigation example">
-
-       {% if project.has_other_pages %}
-  <ul class="pagination">
-    {% if project.has_previous %}
-
-      <li class="page-item ">
-      <a class="page-link" href="?page={{ project.previous_page_number }}" tabindex="-1">Previous</a>
-    </li>
-
-    {% else %}
-        <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    {% endif %}
-    {% for i in project.paginator.page_range %}
-      {% if project.number == i %}
-
-      <li class="page-item active ac">
-      <a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a>
-    </li>
-      {% else %}
-      <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
-    {% endfor %}
-    {% if project.has_next %}
-       <li class="page-item">
-      <a class="page-link" href="?page={{ project.next_page_number }}">Next</a>
-    </li>
-    {% else %}
-      <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Next</a>
-    </li>
-    {% endif %}
-  </ul>
-{% endif %}
-</nav>
-
-</div> <!--ending paginations-->
-
-  <hr>
-
-
-</div>
-
-
-
-
 </div>
 <!--end container-->
 
 <!--footer-->
 
-<div class="container">
-<div class="ml-md-5 mr-md-5">
+<div class="container bg-dark">
+
 <footer class="jumbotron mb-0 mt-5 bg-dark text-white text-center">
 
 <div class="text-center">
@@ -246,7 +179,7 @@ instagram</a></span><br>
  
 </footer>
  </div>
-  </div>
+
 
  <script>  
           
