@@ -14,3 +14,55 @@
 *{
     font-family: var(--font-para);
 }
+.form-control:focus {
+    border-color: #363945;
+    box-shadow: 0 0 0 0.2rem rgba(43, 43, 38, 0.842);
+} 
+
+.form-control{
+    font-size: 13px !important;
+}
+.btn{
+    font-size: 13px !important;
+}
+
+@media screen and (min-width: 992px) {
+.vl {
+    border-right: 1px solid #363945;
+    
+  }
+}
+
+hr{
+    
+    border-top: 1px solid #363945;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #363945;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+  .alert-success{
+    background-color: #363945 !important;
+    color: #fff !important;
+
+}
+
+.anchor-color{
+    color: #363945 !important;
+}

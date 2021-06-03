@@ -1,133 +1,16 @@
-body{
-    font-family:Helvetica Neue; 
-    font-size:16;
-}
-.bg-dark{
-    background-color: #0e76a8 !important;
-}
-.bg-info{
-    background-color: #0e76a8 !important;
-}
-.text-style{
-    font-family:Courier New;
-}
-.text-style-two{
-   font-size: 14px;
-   color: #666666;
-}
-.text-style:hover{
-    color: gray;
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Josefin+Sans&display=swap');
 
-}
-.m-hw{
-    max-height: 130px;
-    max-width: 130px;
-}
-input{
-    font-size: 13px !important;
-}
-a{
-    font-size: 15px !important;
-}
-.dropdown-menu a:hover{
-    color: #808080 !important;
-}
-/* auto hover */
-/*
-.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
- }
- */
- .btn-secondary{
-     background-color: #0e76a8 !important;
-     border-color: #0e76a8;
- }
- .btn-secondary:hover{
-
-    background-color: #0e76a8 !important;
-    border-color: #0e76a8 !important;
-
- }
-
- .dropdown-toggle::after { 
-    display: none !important; 
-} 
-.fas { 
-   
-    color:white; 
-} 
-
-.im-size{
-    max-width: 100% !important;
-    max-width: 100% !important;
+:root {
+    --bg-size: 100% 100%;
+    --main_color: #fff;
+    --title: 'Josefin Sans', sans-serif;
+    --font-para: 'David Libre', serif;
+    --btn-color: #bbe1fa;
+    --btn-font-color: #000;
+    --btn-font: 1.5rem;
+    --eff: .3s all ease;
 }
 
-.t{
-    color: white;
+*{
+    font-family: var(--font-para);
 }
-.active{
-    text-decoration: overline !important;
-
-
-}
-
-.imgg {
-    max-width: 100%;
-}
-
-.mll{
-    color: white;
-}
-.tt{
-    font-size:20px !important;
-    
-}
-.text-dar{
-    color: #0e76a8;
-}
-.btn{
-    font-size: 12px !important;
-}
-.ac{
-    background-color: #b9af9f  !important;
-}
-.bg-primary{
-    background-color: #0e76a8 !important;
-
-}
-.navbar-nav .nav-item{
-    font-weight: 600 !important;
-}
-.navbar-brand{
-    font-weight: 600 !important;
-
-}
-.dropdown-menu .dropdown-item{
-    font-weight: 600 !important;
-
-}
-.rounded{
-    border-radius: 12px !important;
-}
-.img-bor{
-    border-top-left-radius: 12px !important;
-    border-top-right-radius: 12px !important;
-}
-.example .pagination>li>a,
-.example .pagination>li>span {
-  border: 1px solid #0e76a8 !important;
-}
-.pagination>li.active>a {
-  background: #0e76a8 !important;
-  color: #fff !important;
-}
-.page-item .page-link{
-    color: #0e76a8 !important;
-}
-
-
-
-
-
-

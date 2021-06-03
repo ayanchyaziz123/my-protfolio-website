@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ayan.com</title>
+  <title>azizurrahmanayan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -15,20 +15,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <style>
-.vl {
-  border-right: 2px solid #363945;
-  
-}
-</style>
 </head>
-<body style="background-color: #f5f5f5;">
+<body style="background-color: #f5f5f5;" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <!--start container-->
 <div class="container " style="background:#363945;">
   
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-0 pb-0" style="margin">
-  <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark pt-0 pb-0">
+  <a class="navbar-brand" href="{% url 'home' %}">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,13 +30,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#education">Education <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Recent Project</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#recentProject">Recent Project</a>
       </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <li class="nav-item active">
+        <a class="nav-link" href="#contact">Contact</a>
       </li>
      
     </ul>
@@ -56,22 +50,48 @@
 </nav>
 </div>
 
+<!--container end-->
+
+
+<!--message-->
+<div class="container">
+{% for message in messages %}
+
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert" >
+  <strong><i class="fa fa-comments" aria-hidden="true"></i> Message : </strong> {{ message }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+ {% endfor %}
+</div>
+
+<!--message-->
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
 <!--end navbar-->
 
 
 
 <!--start container-->
+
 <div class="container mb-2 mt-2 bg-white" >
+
 <div class="row" style="background:#363945;">
-  <div class="col-sm-4 mt-2 mb-2">
+  <div class="col-sm-4 mt-2 mb-2 text-center">
        <img src="{% static 'images/aya.jpeg' %}" style="max-height:150px; border: 2px solid #46344E" class="ml-5 img-thumbnail">
+      <a href="/static/MyCV.pdf" class="btn-cv btn btn-secondary  mt-2 mb-1"  download>Download CV <i class="fa fa-sort-desc ml-1"  aria-hidden="true"></i></a>
   </div>
-  <div class="col-sm-5">
-  <h1 class="display-4 text-white">Azizur Rahman</h1>
-  <p class="lead text-white">Student At Metropolitan University</p>
+  <div class="col-sm-5 mt-2">
+  <h1 class="display-4 text-white text-sm-center">Azizur Rahman Ayan</h1>
+  <p class="lead text-white text-sm-center nl-3">Student At Metropolitan University</p>
   </div>
   <div class="col-sm-3">
-   <div class="mt-3 text-white">
+   <div class="mt-3 text-white ml-4">
+      <h5>#About</h5>
       <span class=""><i class="fa fa-home" aria-hidden="true"></i> Live in Sylhet <br>
       <span class=""><i class="fa fa-location-arrow" aria-hidden="true"></i> From Sylhet <br>
 <span class=""><a href="mailto:webmaster@example.com" class="text-white"><i class="fa fa-envelope" aria-hidden="true"></i> aaziz9642@gmail.com</a></span><br>
@@ -92,41 +112,130 @@
  by the store management and customers themselves for superb customer service and communication skills.</p>
 </div>
 <div class="col-sm-5 p-3 vl">
-<h5>#Programming Skill</h5>
- <ul>
-         <li>Python</li>
-         <li>Java Script</li>
-         <li>Java</li>
-         <li>C</li>
-      </ul>
+<h5>#Techinical(IT) Skills</h5>
+<ul style="list-style-type: none;">
+  <li>#Tools
+    <ul style="list-style-type: none;">
+      <li>Visual Studio Code</li>
+      <li>Neatbeans</li>
+      <li>Pycharm</li>
+    </ul>
+  </li>
+   <li>#Programming Language
+    <ul style="list-style-type: none;">
+      <li>Python, C, C++, Java, JS, PHP, html and CSS</li>
+    </ul>
+  </li>
+  <li>#MVC/MTV Framework
+    <ul style="list-style-type: none;">
+      <li>Django</li>
+      <li>Laravel(basic)</li>
+      <li>Express js(basic)</li>
+    </ul>
+  </li>
+   <li>#Others
+    <ul style="list-style-type: none;">
+      <li>React js, Bootstrap4, jquery</li>
+    </ul>
+  </li>
+</ul>
 </div>
 <div class="col-sm-4 p-3">
-<h5>#Social Skill</h5>
-<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
- meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+<h5>#Soft Skills</h5>
+<ul style="list-style-type: none;">
+
+      <li class="mt-3"><span class="bg-dark text-white pt-1 pb-1 pr-2 pl-2">Communication</span></li>
+      <li class="mt-3"><span class="bg-dark text-white pt-1 pb-1 pr-2 pl-2">Teamwork</span></li>
+      <li class="mt-3"><span class="bg-dark text-white pt-1 pb-1 pr-2 pl-2">Problem Solving</span></li>
+       <li class="mt-3"><span class="bg-dark text-white pt-1 pb-1 pr-2 pl-2">Confidience</span></li>
+        <li class="mt-3"><span class="bg-dark text-white pt-1 pb-1 pr-2 pl-2">Self Management</span></li>
+         <li class="mt-3"><span class="bg-dark text-white pt-1 pb-1 pr-2 pl-2">Flexibility</span></li>
+</ul>
 </div>
 </div>
 
 <hr>
 
 <div class="row ">
-<div class="col-sm-8 p-3 vl">
+<div class="col-sm-8 p-3 vl" id="recentProject">
 <h5>#Recent Project</h5>
-<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
- meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+{% for project in project %}
+
+<div class="mb-4">
+</a>
+ <a type="button"  data-toggle="modal" data-target="#myModal{{project.id}}">
+    <span class=""><b>{{project.projectTitle}}</b></span><br>
+    <span class="mt-2">{{project.projectDescriptions | safe |truncatechars:150}} ... click here</span><br>
+  </a>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal{{project.id}}">
+    <div class="modal-dialog modal-lg ">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header  bg-dark text-white" style="margin-left:-1px;">
+          <h4 class="modal-title">{{project.projectTitle}}</h4>
+          <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="{{project.projectVideoUrl}}" allowfullscreen></iframe>
+</div>
+
+        <div class="ml-5 mr-5 mt-5">{{project.projectBody|safe}}</div>
+
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+{% endfor %}
+
+
+
+
 </div>
 <div class="col-sm-4 p-3 ">
-<h5>#Education</h5>
-<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
- meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+
+
+
+
+<h5 id="education">#Education</h5>
+<span><b>Bsc In CSE</b></span><br>
+<span>Metropolitan University, Bangladesh</span></br>
+<span>2018-2021</span>
+<hr>
+
+<h5>#Experience</h5>
+<span>Class representative for 4 years</span><br>
+<span class="mt-2">ICT teacher for 1 year</span><br>
+<span class="mt-2">MUSSC member for 1 year</span><br>
+
 
 <hr>
 
-<h5>#Education</h5>
-<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on
- meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+<h5>#Interests</h5>
+<ul style="list-style-type: none;">
 
-
+      <li class="mt-3"><span class="bg-dark text-white pt-1 pb-1 pr-2 pl-2">Artificial Intelligence</span></li>
+      <li class="mt-3"><span class="bg-dark text-white pt-1 pb-1 pr-2 pl-2">Machine Learning</span></li>
+      <li class="mt-3"><span class="bg-dark text-white pt-1 pb-1 pr-2 pl-2">Robotics</span></li>
+</ul>
 
 </div>
 
@@ -137,7 +246,7 @@
 <div class="row mt-5 bg-dark">
 <div class="col-sm-3">
 </div>
-<div class="col-sm-6  text-white p-3">
+<div class="col-sm-6  text-white p-3 mb-3 mt-3" id="contact">
 <h5>#Contact</h5>
 <form class="ml-4 mr-2" name="myForm" action="{% url 'contact' %}" method="POST" onsubmit="return validateForm()">
 {% csrf_token %}
@@ -179,9 +288,11 @@
 
 
 
-<!--container end-->
-</div> 
 
+</div> <!--end row-->
+
+</div>
+<!--container end-->
 
 <!--container-->
 <div class="container">
@@ -191,15 +302,7 @@
 
 <!--about me-->
 
-{% for message in messages %}
 
-<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert" >
-  <strong><i class="fa fa-comments" aria-hidden="true"></i> Message : </strong> {{ message }}
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
- {% endfor %}
  <div class="row">
    
     
@@ -212,7 +315,12 @@
 
 
 </div>
+</div>
 <!--end container-->
+
+
+
+
 
 <!--footer-->
 
@@ -231,6 +339,8 @@
  
 </footer>
  </div>
+
+
 
 
  <script>  
@@ -276,6 +386,27 @@
 
 
     </script>
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
 </body>
 </html>
