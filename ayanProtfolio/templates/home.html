@@ -13,7 +13,10 @@
   </div>
   <div class="col-sm-5 mt-2">
   <h1 class="display-4 text-white text-sm-center">Azizur Rahman Ayan</h1>
-  <p class="lead text-white text-sm-center nl-3">Student At Metropolitan University</p>
+  <p class="lead text-white text-sm-center nl-3">I am a Student, Competative Programmer and Wedb Developer
+  
+  
+  </p>
   </div>
   <div class="col-sm-3">
    <div class="mt-3 text-white ml-4">
@@ -33,16 +36,25 @@
 
 <div class="row ">
 <div class="col-sm-3 p-3 vl">
-<h5>#Profile</h5>
-<p>Disciplined and enthusiastic sales associate, conversant with POS and stock management systems. Eager to join the ABC Store team to boost sales numbers and customer loyalty metrics. Previous retail experience includes a summer job as a restocker and cashier at DEF Store. Commended on multiple occasions
- by the store management and customers themselves for superb customer service and communication skills.</p>
+<h5>#MySelf</h5>
+
+    {% for myself in myself %}
+
+    <div>
+    {{myself.body | safe}}
+    </div>
+    
+    
+    {% endfor %}
+
+
 </div>
 <div class="col-sm-5 p-3 vl">
 <h5>#Techinical(IT) Skills</h5>
 <ul style="list-style-type: none;">
   <li>#Tools
     <ul style="list-style-type: none;">
-      <li>Visual Studio Code</li>
+      <li>Visual Studio Code (Usually, I work by using vs code)</li>
       <li>Neatbeans</li>
       <li>Pycharm</li>
     </ul>
