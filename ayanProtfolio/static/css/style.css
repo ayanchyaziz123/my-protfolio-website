@@ -25,6 +25,17 @@
 .btn{
     font-size: 13px !important;
 }
+.btn-secondary{
+    background-color: #615550;
+    color: #fff !important;
+}
+
+.btn-secondary:hover{
+    background-color: #3a312d;
+    transition-duration: 0.9s;
+}
+
+
 
 @media screen and (min-width: 992px) {
 .vl {
